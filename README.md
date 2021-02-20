@@ -18,7 +18,7 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}`
 * Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
-<!-- * Podknife: `https://podknife.com/podcast?feed_url=${appleID}` -->
+* Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}`
 * Sonnet: `https://sonnet.fm/p/${appleID}`
 
@@ -40,7 +40,7 @@ For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
 ### Non-deterministic Platform Episode Links
-* Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${appleEpisodeID}`
+* Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`
 * Breaker: `https://breaker.audio/${uniquePlatformID}/e/${uniqueEpisodeID}`
 * Bullhorn: `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`
 * Castbox: `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`
@@ -48,14 +48,14 @@ For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`
 * Overcast: `https://overcast.fm/+${uniqueEpisodeID}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}`
-* Podbean: `https://www.podbean.com/media/share/dir-${uniqueEpisodeID}`
+* Podbean: `https://podbean.com/media/share/dir-${uniqueEpisodeID}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`
 * Podhero: `https://podhero.com/${uniquePlatformID}/${slug}-${uniqueEpisodeID}`
 * Podknife: `https://podknife.com/episodes/${uniqueEpisodeID}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`
 * Spotify: `https://open.spotify.com/episode/${uniqueEpisodeID}`
-* Stitcher: `https://www.stitcher.com/show/${uniquePlatformID}/episode/${uniqueEpisodeID}`
+* Stitcher: `https://stitcher.com/show/${uniquePlatformID}/episode/${uniqueEpisodeID}`
 
 ### No Episode Links
 * Castro
