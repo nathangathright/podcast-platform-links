@@ -9,7 +9,7 @@ Many podcast apps have deterministic URLs if you know their Apple ID or feed URL
 * Bullhorn: `https://bullhorn.fm/podchaser/itunes/${appleID}`
 * Castbox: `https://castbox.fm/vic/${appleID}`
 * Castro: `https://castro.fm/itunes/${appleID}`
-* Google Podcasts: `https://podcasts.google.com/?feed=${toBase64(feedUrl)}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}`
 * Listen Notes: `https://listennotes.com/itunes/id${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}`
@@ -43,7 +43,7 @@ Many podcast apps have deterministic URLs if you know their Apple ID or feed URL
 ## Episodes
 
 ### Deterministic Episode Links
-* Google Podcasts: `https://podcasts.google.com/?feed=${toBase64(feedUrl)}&episode=${toBase64(episodeGuid)}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
