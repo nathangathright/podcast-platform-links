@@ -1,5 +1,5 @@
 # Podcast Platform Links
-Many podcast apps have deterministic URLs if you know their Apple ID or feed URL. Some require lookups in their API, and Some apps also support episode URLs based on the GUID value found in RSS feed. 
+Many podcast apps have deterministic URLs if you know their Apple ID or feed URL. Some require lookups in their API, and some support both. A handful also support episode URLs based on GUIDs found in the RSS feed.
 
 ## Deterministic Show Links
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}`
@@ -12,24 +12,37 @@ Many podcast apps have deterministic URLs if you know their Apple ID or feed URL
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}`
-* Podbean: `https://www.podbean.com/play/${encodeURIComponent(feedUrl)}`
+* Podbean: `https://podbean.com/play/${encodeURIComponent(feedUrl)}`
 * Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(rssFeedUrl)}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
 * Podchaser: `https://podchaser.com/f/pod/${appleID}`
+* Podfriend: `https://web.podfriend.com/podcast/${appleID}`
+* Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
 * Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
 * Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
 * Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
 * Podnews: `https://podnews.net/podcast/${appleID}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}`
+* Sonnet: `https://sonnet.fm/p/${appleID}`
 
 ## Non-deterministic Show Links
-* Amazon Music: 
-* iHeartRadio: `https://www.iheart.com/podcast/${iHeartRadioID}`
-* Pandora: 
+* Amazon Music: `https://music.amazon.com/podcasts/${amazonID}`
+* iHeartRadio: `https://iheart.com/podcast/${iHeartRadioID}`
+* Luminary: `https://luminarypodcasts.com/listen/${slug}/${slug}/${luminaryID}`
+* Pandora: `https://pandora.com/podcast/${slug}/PC:${pandoraID}`
+* Podcast Index: `https://podcastindex.org/podcast/${podcastIndexID}`
 * Spotify: `https://open.spotify.com/${spotifyID}`
-* Stitcher: `https://www.stitcher.com/s?fid=${stitcherID}`
-* TuneIn: 
+* Stitcher: `https://stitcher.com/s?fid=${stitcherID}`
+* TuneIn: `https://tunein.com/podcasts/${tuneInID}`
+
+## Deterministic Episode Links
+* Google Podcasts: `https://podcasts.google.com/?feed=${toBase64(feedUrl)}&episode=${toBase64(episodeGuid)}`
+* Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
+* Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
 ## Example Lookups
-* Lookup a feedURL from an Apple ID: `https://itunes.apple.com/lookup?id=${appleID}&entity=podcast`
-* Lookup episode URLs from an Apple ID: `https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=10`
+* Lookup a feedURL from an Apple ID: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcast`
+* Lookup episode URLs from an Apple ID: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
+
+## Additional Resources
+* [Breaker Lookup Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
