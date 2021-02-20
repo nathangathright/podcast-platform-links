@@ -9,7 +9,7 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * Bullhorn: `https://bullhorn.fm/podchaser/itunes/${appleID}`
 * Castbox: `https://castbox.fm/vic/${appleID}`
 * Castro: `https://castro.fm/itunes/${appleID}`
-* Google Podcasts: `https://podcasts.google.com/?feed=${toBase64(feedUrl)}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}`
@@ -35,12 +35,12 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ€™s presence might not be necessary to form a valid URL. A `uniquePlatformID` or `uniqueEpisodeID` may look like a slug, but are not malleable in the way a slug is.
 
 ### Deterministic Platform Episode Links
-* Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${appleEpisodeID}`
-* Google Podcasts: `https://podcasts.google.com/?feed=${toBase64(feedUrl)}&episode=${toBase64(episodeGuid)}?i=${appleEpisodeID}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}?i=${appleEpisodeID}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
 ### Non-deterministic Platform Episode Links
+* Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${appleEpisodeID}`
 * Breaker: `https://breaker.audio/${uniquePlatformID}/e/${uniqueEpisodeID}`
 * Bullhorn: `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`
 * Castbox: `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`
@@ -76,3 +76,6 @@ For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ
 * Request Apple episode IDs from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
 * Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
 * Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
+
+## Technical Considerations
+* Instead of btoa(), Google Podcasts uses a URL-safe variant of base64 for their hashes that replaces `+` and `/` with `-` and `_` respectively.
