@@ -72,6 +72,7 @@ For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ
 * Podnews: `https://podnews.net/podcast/${appleID}`
 
 ## Example Lookups
-* Lookup a feedURL from an Apple ID: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcast`
-* Lookup episode URLs from an Apple ID: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
-* Add/lookup a Breaker URL from an Apple ID: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
+* Request a `feedUrl` from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcast`
+* Request Apple episode IDs from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
+* Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
+* Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
