@@ -76,3 +76,6 @@ For the purposes of this list, a `slug` is a string with an arbitrary value. Itâ
 * Request Apple episode IDs from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
 * Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
 * Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
+
+## Technical Considerations
+* Instead of btoa(), Google Podcasts uses a URL-safe variant of base64 for their hashes that replaces `+` and `/` with `-` and `_` respectively.
