@@ -1,5 +1,5 @@
 # Podcast Platform Links
-Many podcast apps have deterministic URLs if you know their `appleID` or `feedUrl`. Some require lookups in their API, and some support both. A handful also support episode URLs based on a `GUID` found in the RSS feed. Those variables will be used to construct our deterministic URLs.
+Many podcast apps have deterministic URLs if you know their `appleID` or `feedUrl`. Some require lookups in their API, and some support both. A handful also support episode URLs based on a `GUID` found in the RSS feed. Those variables will be used to construct our deterministic URLs. For the purposes of this list, a `slug` is a string with an arbitrary value. It’s presence might not be necessary to form a valid URL. A `uniquePlatformID` or `uniqueEpisodeID` may look like a slug, but are not malleable in the way a slug is.
 
 ## Shows
 
@@ -32,7 +32,6 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * TuneIn: `https://tunein.com/podcasts/${uniquePlatformID}`
 
 ## Episodes
-For the purposes of this list, a `slug` is a string with an arbitrary value. It’s presence might not be necessary to form a valid URL. A `uniquePlatformID` or `uniqueEpisodeID` may look like a slug, but are not malleable in the way a slug is.
 
 ### Deterministic Platform Episode Links
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}?i=${appleEpisodeID}`
