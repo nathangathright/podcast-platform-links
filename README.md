@@ -34,7 +34,7 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 ## Episodes
 
 ### Deterministic Platform Episode Links
-* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}?i=${appleEpisodeID}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
@@ -63,7 +63,7 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * Odesli: `https://pods.link/i/${appleID}`
 * Plink: `https://plinkhq.com/i/${appleID}?to=page`
 * pod.link: `https://pod.link/${appleID}`
-* Podcast Index: `https://podcastindex.org/podcast/${podcastIndexID}`
+* Podcast Index: `https://podcastindex.org/podcast/${uniquePlatformID}`
 * Podchaser: `https://podchaser.com/f/pod/${appleID}`
 * podfollow: `https://podfollow.com/${appleID}`
 * Podnews: `https://podnews.net/podcast/${appleID}`
