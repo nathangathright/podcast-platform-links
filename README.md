@@ -43,6 +43,7 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * Breaker: `https://breaker.audio/${uniquePlatformID}/e/${uniqueEpisodeID}`
 * Bullhorn: `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`
 * Castbox: `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`
+* Castro: `https://castro.fm/episode/${uniqueEpisodeID}`
 * iHeartRadio: `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}/`
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`
 * Overcast: `https://overcast.fm/+${uniqueEpisodeID}`
@@ -53,12 +54,9 @@ Many podcast apps have deterministic URLs if you know their `appleID` or `feedUr
 * Podhero: `https://podhero.com/${uniquePlatformID}/${slug}-${uniqueEpisodeID}`
 * Podknife: `https://podknife.com/episodes/${uniqueEpisodeID}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`
+* Sonnet: `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`
 * Spotify: `https://open.spotify.com/episode/${uniqueEpisodeID}`
 * Stitcher: `https://stitcher.com/show/${uniquePlatformID}/episode/${uniqueEpisodeID}`
-
-### No Episode Links
-* Castro
-* Sonnet
 
 ## Resource Links
 * Listen Notes: `https://listennotes.com/itunes/id${appleID}`
