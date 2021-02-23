@@ -76,3 +76,21 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 * Request Apple episode IDs from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
 * Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
 * Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
+
+## Scraping Methods
+
+### Google Podcasts
+To check that Google Podcasts lists a specific RSS feed, scrape the HTML page looking for the specific error message:
+
+```
+$googleUrl="https://podcasts.google.com/feed/";
+$googleUrl.="aHR0cHM6Ly9wb2RuZXdzLm5ldC9yc3M";
+$googleHTML=file_get_contents($googleUrl);
+  if (strpos($googleHTML,'">This podcast is not available')) {
+    echo "This podcast is not in Google Podcasts";
+  }
+```
+
+If it doesn't, you can still offer a subscription button for Google Podcasts users by using their "subscribe-by-rss-feed" endpoint. This offers a less user-friendly method to subscribe, but does work in apps and on the web.
+
+`https://podcasts.google.com/subscribe-by-rss-feed?feed=aHR0cHM6Ly9wb2RjYXN0cy5maWxlcy5iYmNpLmNvLnVrL3AwMnBjOXBqLnJzcw==`
