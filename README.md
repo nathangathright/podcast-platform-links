@@ -65,7 +65,7 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 * Listen Notes: `https://listennotes.com/itunes/id${appleID}`
 * Odesli: `https://pods.link/i/${appleID}`
 * Plink: `https://plinkhq.com/i/${appleID}?to=page`
-* pod.link: `https://pod.link/${appleID}`
+* pod.link: `https://pod.link/${appleID}` or `https://pod.link/${btoa(feedUrl)}`
 * Podcast Index: `https://podcastindex.org/podcast/${uniquePlatformID}`
 * Podchaser: `https://podchaser.com/f/pod/${appleID}`
 * podfollow: `https://podfollow.com/${appleID}`
