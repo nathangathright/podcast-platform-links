@@ -77,5 +77,5 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 * Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
 * Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
 
-Troubleshooting
+## Troubleshooting
 * Check if an RSS feed is listed on Google Podcasts: [Documentation](https://podnews.net/article/google-podcasts-app-faq#-how-can-i-programmatically-check-that-a-feed-is-in-google-podcasts)
