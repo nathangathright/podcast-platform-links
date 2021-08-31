@@ -8,7 +8,6 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 
 ### Deterministic Platform Show Links
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}`
-* Breaker: `https://breaker.audio/shows?feed_url=${encodeURIComponent(feedUrl)}`
 * Bullhorn: `https://bullhorn.fm/podchaser/itunes/${appleID}`
 * Castbox: `https://castbox.fm/vic/${appleID}`
 * Castro: `https://castro.fm/itunes/${appleID}`
@@ -27,6 +26,7 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 
 ### Non-deterministic Platform Show Links
 * Amazon Music: `https://music.amazon.com/podcasts/${uniquePlatformID}`
+* Breaker: `https://breaker.audio/${uniquePlatformID}`
 * iHeartRadio: `https://iheart.com/podcast/${uniquePlatformID}`
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`
 * Pandora: `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`
