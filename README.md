@@ -43,7 +43,7 @@ In this context, a `slug` is a string with a malleable, arbitrary value. For som
 
 ### Non-deterministic Platform Episode Links
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`
-* Breaker: `https://breaker.audio/${slug}/e/${uniqueEpisodeID}`
+* Breaker: `https://breaker.audio/${uniquePlatformID}/e/${uniqueEpisodeID}`
 * Bullhorn: `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`
 * Castbox: `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`
 * Castro: `https://castro.fm/episode/${uniqueEpisodeID}`
