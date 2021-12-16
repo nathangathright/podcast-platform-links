@@ -1,8 +1,10 @@
 # Podcast Platform Links
-The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide [API methods](#api-methods) to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys like `appleID` or `feedUrl` for shows and `GUID` or `audioFileUrl` for episodes. These keys let us construct URLs with confidence.
+The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide [API methods](#api-methods) to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys like `appleID`, `feedUrl`, or `podcastindexID` for shows and `GUID` or `audioFileUrl` for episodes. These keys let us construct URLs with confidence.
 
 ## Terminology
-In this context, a `slug` is a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. A `uniquePlatformID` or `uniqueEpisodeID` represents an identifier specific to that platform. Instead of `btoa()`, Google Podcasts uses a URL-safe variant of base64 for their hashes that replaces `+` and `/` with `-` and `_` respectively.
+* `slug`, in this context, is a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. 
+* `uniquePlatformID` and `uniqueEpisodeID` represent an identifier specific to that platform. 
+* `btoa()`, in this context, refers to a URL-safe variant of base64 for hashes that replaces `+` and `/` with `-` and `_` respectively.
 
 ## Shows
 
