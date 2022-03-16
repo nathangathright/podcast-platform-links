@@ -15,6 +15,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Castro: `https://castro.fm/itunes/${appleID}`
 * CurioCaster: `https://curiocaster.com/podcast/pi${podcastindexID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${btoa(feedUrl)}`
+* Momento: `https://momento.fm/pod/${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}`
