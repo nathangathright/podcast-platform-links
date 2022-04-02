@@ -73,7 +73,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Odesli: `https://pods.link/i/${appleID}`
 * Plink: `https://plinkhq.com/i/${appleID}?to=page`
 * pod.link: `https://pod.link/${appleID}` or `https://pod.link/${btoa(feedUrl)}`
-* Podcast Index: `https://podcastindex.org/podcast/${uniquePlatformID}`
+* Podcast Index: `https://podcastindex.org/podcast/${podcastindexID}`
 * Podchaser: `https://podchaser.com/f/pod/${appleID}`
 * podfollow: `https://podfollow.com/${appleID}`
 * Podnews: `https://podnews.net/podcast/${appleID}` or `https://podnews.net/podcast/pi${podcastindexID}`
