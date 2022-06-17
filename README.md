@@ -17,11 +17,12 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${btoa(feedUrl)}`
 * Momento: `https://momento.fm/pod/${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
-* Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}`
+* Player FM: `https://player.fm/subscribe?id=${encodeURIComponent(feedUrl)}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}`
-* Podbean: `https://podbean.com/play/${encodeURIComponent(feedUrl)}`
+* Podbean: `https://www.podbean.com/itunes/${appleID}`
 * Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(rssFeedUrl)}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
+* Podcast Republic: `https://www.podcastrepublic.net/podcast/${appleID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}`
 * Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
 * Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
