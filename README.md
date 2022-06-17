@@ -32,7 +32,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 
 ### Non-deterministic Platform Show Links
 * Amazon Music: `https://music.amazon.com/podcasts/${uniquePlatformID}`
-* Breaker: `https://breaker.audio/${uniquePlatformID}`
 * iHeartRadio: `https://iheart.com/podcast/${uniquePlatformID}`
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`
 * Pandora: `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`
@@ -49,7 +48,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 
 ### Non-deterministic Platform Episode Links
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`
-* Breaker: `https://breaker.audio/${uniquePlatformID}/e/${uniqueEpisodeID}`
 * Bullhorn: `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`
 * Castbox: `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`
 * Castro: `https://castro.fm/episode/${uniqueEpisodeID}`
@@ -81,7 +79,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## API Methods
 * Request a `feedUrl` from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcast`
 * Request Apple episode IDs from an `appleID`: `GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300`
-* Request a Breaker ID from an `appleID`/`feedUrl`: [Documentation](https://blog.breaker.audio/how-to-add-a-podcast-to-breaker-68677e12c0c3#4d0f)
 * Request a Podcast Index ID from an `appleID`/`feedUrl`: [Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
 
 ## Troubleshooting
