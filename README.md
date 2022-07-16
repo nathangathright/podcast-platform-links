@@ -9,16 +9,20 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## Shows
 
 ### Deterministic Platform Show Links
+* Anytime Player: `https://anytimeplayer.app/subscribe?url=${feedUrl}`
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}`
 * Bullhorn: `https://bullhorn.fm/podchaser/itunes/${appleID}`
 * Castbox: `https://castbox.fm/vic/${appleID}`
 * Castro: `https://castro.fm/itunes/${appleID}`
 * CurioCaster: `https://curiocaster.com/podcast/pi${podcastindexID}`
+* Fountain: `https://fountain.fm/show/${podcastindexID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${btoa(feedUrl)}`
+* gpodder: `http://gpodder.net/subscribe?url=${feedUrl}`
 * Momento: `https://momento.fm/pod/${appleID}`
+* Moon FM: `https://moon.fm/itunes/${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/subscribe?id=${encodeURIComponent(feedUrl)}`
-* Pocket Casts: `https://pca.st/itunes/${appleID}`
+* Pocket Casts: `https://pca.st/itunes/${appleID}` or `http://pcasts.in/feed/${feedUrl}`
 * Podbean: `https://www.podbean.com/itunes/${appleID}`
 * Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(rssFeedUrl)}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
@@ -28,6 +32,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
 * podStation: `https://podstation.github.io/subscribe-ext/?feedUrl=${appleID}`
 * Podverse: `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastindexID}`
+* Podvine: `https://podvine.com/link?feed=${feedUrl}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}`
 * Sonnet: `https://sonnet.fm/p/${appleID}`
 
