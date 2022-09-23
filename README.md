@@ -16,6 +16,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Castro: `https://castro.fm/itunes/${appleID}`
 * CurioCaster: `https://curiocaster.com/podcast/pi${podcastindexID}`
 * Fountain: `https://fountain.fm/show/${podcastindexID}`
+* Goodpods: `https://www.goodpods.com/podcasts-aid/${appleID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${btoa(feedUrl)}`
 * gpodder: `http://gpodder.net/subscribe?url=${feedUrl}`
 * Momento: `https://momento.fm/pod/${appleID}`
