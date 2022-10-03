@@ -49,6 +49,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## Episodes
 
 ### Deterministic Platform Episode Links
+* Fountain: `https://fountain.fm/episode/${podcastindexID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
