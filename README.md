@@ -25,7 +25,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Player FM: `https://player.fm/subscribe?id=${encodeURIComponent(feedUrl)}`
 * Pocket Casts: `https://pca.st/itunes/${appleID}` or `http://pcasts.in/feed/${feedUrl}`
 * Podbean: `https://www.podbean.com/itunes/${appleID}`
-* Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(rssFeedUrl)}`
+* Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(feedUrl)}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
 * Podcast Republic: `https://www.podcastrepublic.net/podcast/${appleID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}`
