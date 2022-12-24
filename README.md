@@ -40,6 +40,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 
 ### Non-deterministic Platform Show Links
 * Amazon Music: `https://music.amazon.com/podcasts/${uniquePlatformID}`
+* Deezer: `https://www.deezer.com/us/show/${uniquePlatformID}`
 * iHeartRadio: `https://iheart.com/podcast/${uniquePlatformID}`
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`
 * Pandora: `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`
