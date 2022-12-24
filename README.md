@@ -9,6 +9,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## Shows
 
 ### Deterministic Platform Show Links
+* Antennapod: `https://antennapod.org/deeplink/subscribe?url=${feedUrl}`
 * Anytime Player: `https://anytimeplayer.app/subscribe?url=${feedUrl}`
 * Apple Podcasts: `https://podcasts.apple.com/podcast/id${appleID}`
 * Bullhorn: `https://bullhorn.fm/podchaser/itunes/${appleID}`
