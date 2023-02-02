@@ -31,7 +31,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podcast Republic: `https://www.podcastrepublic.net/podcast/${appleID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}`
 * Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
-* Podknife: `https://podknife.com/podcast?feed_url=${appleID}`
+* Podknife: `https://podknife.com/podcast?feed_url=${feedUrl}`
 * podStation: `https://podstation.github.io/subscribe-ext/?feedUrl=${appleID}`
 * Podverse: `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastindexID}`
 * Podvine: `https://podvine.com/link?feed=${feedUrl}`
