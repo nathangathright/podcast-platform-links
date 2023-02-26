@@ -4,7 +4,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## Terminology
 * `slug`, in this context, is a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. 
 * `uniquePlatformID` and `uniqueEpisodeID` represent an identifier specific to that platform. 
-* `btoa()`, in this context, refers to a URL-safe variant of base64 for hashes that replaces `+` and `/` with `-` and `_` respectively.
+* `base64url()`, in this context, refers to a [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
 
 ## Shows
 
@@ -18,7 +18,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * CurioCaster: `https://curiocaster.com/podcast/pi${podcastindexID}`
 * Fountain: `https://fountain.fm/show/${podcastindexID}`
 * Goodpods: `https://www.goodpods.com/podcasts-aid/${appleID}`
-* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${btoa(feedUrl)}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${base64url(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedUrl)}`
 * gpodder: `http://gpodder.net/subscribe?url=${feedUrl}`
 * Momento: `https://momento.fm/pod/${appleID}`
 * Moon FM: `https://moon.fm/itunes/${appleID}`
@@ -52,7 +52,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 
 ### Deterministic Platform Episode Links
 * Fountain: `https://fountain.fm/episode/${podcastindexID}`
-* Google Podcasts: `https://podcasts.google.com/?feed=${btoa(feedUrl)}&episode=${btoa(episodeGuid)}`
+* Google Podcasts: `https://podcasts.google.com/?feed=${base64url(feedUrl)}&episode=${base64url(episodeGuid)}`
 * Player FM: `https://player.fm/series/${encodeURIComponent(feedUrl)}/guid:${encodeURIComponent(episodeGuid)}`
 * Podcast Addict: `https://podcastaddict.com/episode/${encodeURIComponent(audioFileUrl)}`
 
@@ -80,7 +80,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Listen Notes: `https://listennotes.com/itunes/id${appleID}`
 * Odesli: `https://pods.link/i/${appleID}`
 * Plink: `https://plinkhq.com/i/${appleID}?to=page`
-* pod.link: `https://pod.link/${appleID}` or `https://pod.link/${btoa(feedUrl)}`
+* pod.link: `https://pod.link/${appleID}` or `https://pod.link/${base64url(feedUrl)}`
 * Podcast Index: `https://podcastindex.org/podcast/${podcastindexID}`
 * Podchaser: `https://podchaser.com/f/pod/${appleID}`
 * podfollow: `https://podfollow.com/${appleID}`
