@@ -20,7 +20,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Goodpods: `https://www.goodpods.com/podcasts-aid/${appleID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${base64url(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedUrl)}`
 * gpodder: `http://gpodder.net/subscribe?url=${feedUrl}`
-* Momento: `https://momento.fm/pod/${appleID}`
 * Moon FM: `https://moon.fm/itunes/${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/subscribe?id=${encodeURIComponent(feedUrl)}`
