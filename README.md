@@ -70,7 +70,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podhero: `https://podhero.com/${uniquePlatformID}/${slug}-${uniqueEpisodeID}`
 * Podknife: `https://podknife.com/episodes/${uniqueEpisodeID}`
 * Podverse: `https://podverse.fm/episode/${uniqueEpisodeID}`
-* RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`
 * Sonnet: `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`
 * Spotify: `https://open.spotify.com/episode/${uniqueEpisodeID}`
 * Stitcher: `https://stitcher.com/show/${uniquePlatformID}/episode/${uniqueEpisodeID}`
