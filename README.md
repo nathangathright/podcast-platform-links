@@ -67,7 +67,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podbean: `https://podbean.com/media/share/dir-${uniqueEpisodeID}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`
-* Podhero: `https://podhero.com/${uniquePlatformID}/${slug}-${uniqueEpisodeID}`
 * Podknife: `https://podknife.com/episodes/${uniqueEpisodeID}`
 * Podverse: `https://podverse.fm/episode/${uniqueEpisodeID}`
 * RadioPublic: `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`
