@@ -20,6 +20,8 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Goodpods: `https://www.goodpods.com/podcasts-aid/${appleID}`
 * Google Podcasts: `https://podcasts.google.com/?feed=${base64url(feedUrl)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedUrl)}`
 * gpodder: `http://gpodder.net/subscribe?url=${feedUrl}`
+* Jam: `https://www.listentojam.com/itunes/${appleID}`
+* Listen Notes: `https://listennotes.com/itunes/id${appleID}`
 * Moon FM: `https://moon.fm/itunes/${appleID}`
 * Overcast: `https://overcast.fm/itunes${appleID}`
 * Player FM: `https://player.fm/subscribe?id=${encodeURIComponent(feedUrl)}`
@@ -28,6 +30,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podcast Addict: `https://podcastaddict.com/feed/${encodeURIComponent(feedUrl)}`
 * Podcast Guru: `https://app.podcastguru.io/podcast/${appleID}`
 * Podcast Republic: `https://www.podcastrepublic.net/podcast/${appleID}`
+* Podchaser: `https://podchaser.com/f/pod/${appleID}`
 * Podfriend: `https://web.podfriend.com/podcast/${appleID}`
 * Podhero: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`
 * Podknife: `https://podknife.com/podcast?feed_url=${feedUrl}`
