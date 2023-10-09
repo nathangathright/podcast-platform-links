@@ -47,7 +47,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Luminary: `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`
 * Pandora: `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`
 * Spotify: `https://open.spotify.com/${uniquePlatformID}`
-* Stitcher: `https://stitcher.com/s?fid=${uniquePlatformID}`
 * TuneIn: `https://tunein.com/podcasts/${uniquePlatformID}`
 
 ## Episodes
@@ -74,7 +73,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * Podverse: `https://podverse.fm/episode/${uniqueEpisodeID}`
 * Sonnet: `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`
 * Spotify: `https://open.spotify.com/episode/${uniqueEpisodeID}`
-* Stitcher: `https://stitcher.com/show/${uniquePlatformID}/episode/${uniqueEpisodeID}`
 
 ## Resource Links
 * Listen Notes: `https://listennotes.com/itunes/id${appleID}`
