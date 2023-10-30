@@ -7,6 +7,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 1. [Episode Links](#episode-links)
 1. [Resource Links](#resource-links)
 1. [Tips & Tricks](#tips--tricks)
+1. [Contributing](#contributing)
 1. [Footnotes](#footnotes)
 
 ## Glossary
@@ -125,6 +126,9 @@ GET https://api.podcastindex.org/api/1.0/podcasts/byfeedurl?id=${feedURL}
 
 ### Check if an RSS feed is listed on Google Podcasts
 [Documentation](https://podnews.net/article/google-podcasts-app-faq#-how-can-i-programmatically-check-that-a-feed-is-in-google-podcasts)
+
+## Contributing
+If you have an update to improve this guide, please [fork the repo](https://github.com/nathangathright/podcast-platform-links/fork) and create a pull request. This Markdown document is easily editable from the GitHub web interface without the need to clone the repo locally.
 
 ## Footnotes
 [^1]: [Google Podcasts to shut down in 2024 with listeners migrated to YouTube Music](https://techcrunch.com/2023/09/26/google-podcasts-to-shut-down-in-2024-with-listeners-migrated-to-youtube-music/)
