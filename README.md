@@ -1,5 +1,5 @@
 # Podcast Platform Links
-The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide [API methods](#api-methods) to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys that let us construct URLs with confidence.
+The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide API methods to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys that let us construct URLs with confidence.
 
 ## Table of Contents
 1. [Glossary](#glossary)
@@ -41,7 +41,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Deezer | ❌ | `https://www.deezer.com/us/show/${uniquePlatformID}` |
 | Fountain | ✅ | `https://fountain.fm/show/${podcastIndexShowID}` |
 | Goodpods | ✅ | `https://www.goodpods.com/podcasts-aid/${appleID}` |
-| Google Podcasts[^1] | ✅ | `https://podcasts.google.com/?feed=${base64url(feedURL)}` or `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedURL)}` |
+| Google Podcasts[^1] | ✅ | `https://podcasts.google.com/?feed=${base64url(feedURL)}` <br> `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedURL)}` |
 | gpodder | ✅ | `http://gpodder.net/subscribe?url=${feedURL}` |
 | iHeartRadio | ❌ | `https://iheart.com/podcast/${uniquePlatformID}` |
 | Jam | ✅ | `https://www.listentojam.com/itunes/${appleID}` |
@@ -50,7 +50,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Overcast | ✅ | `https://overcast.fm/itunes${appleID}` |
 | Pandora | ❌ | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}` |
 | Player FM | ✅ | `https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}` |
-| Pocket Casts | ✅ | `https://pca.st/itunes/${appleID}` or `http://pcasts.in/feed/${feedURL}` |
+| Pocket Casts | ✅ | `https://pca.st/itunes/${appleID}` <br> `http://pcasts.in/feed/${feedURL}` |
 | Podbean | ✅ | `https://www.podbean.com/itunes/${appleID}` |
 | Podcast Addict | ✅ | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}` |
 | Podcast Guru | ✅ | `https://app.podcastguru.io/podcast/${appleID}` |
@@ -100,11 +100,11 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Listen Notes | `https://listennotes.com/itunes/id${appleID}` |
 | Odesli | `https://pods.link/i/${appleID}` |
 | Plink | `https://plinkhq.com/i/${appleID}?to=page` |
-| pod.link | `https://pod.link/${appleID}` or `https://pod.link/${base64url(feedURL)}` |
+| pod.link | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}` |
 | Podcast Index | `https://podcastindex.org/podcast/${podcastIndexShowID}` |
 | Podchaser | `https://podchaser.com/f/pod/${appleID}` |
 | podfollow | `https://podfollow.com/${appleID}` |
-| Podnews | `https://podnews.net/podcast/${appleID}` or `https://podnews.net/podcast/pi${podcastIndexShowID}` |
+| Podnews | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` |
 
 ## Tips & Tricks
 ### Request a feedURL from an appleID
