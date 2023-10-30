@@ -93,7 +93,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Steno.fm | ✅ | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}` |
 
 ## Resource Links
-These resources also support podcast foreign keys, but their primary purpose may be informational or to direct listeners to one of the apps above.
+These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
 
 | Destination | URL Pattern |
 | ----------- | ----------- |
