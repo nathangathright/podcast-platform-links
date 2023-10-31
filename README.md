@@ -28,8 +28,8 @@ The distributed nature of podcasting makes linking to a show on a given platform
 * `base64url()`: A [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
 
 ## Show Links
-| Destination | Deterministic | URL Pattern |
-| ----------- | ------------- | ----------- |
+| Platform | Foreign Keys | URL Pattern |
+| -------- | ------------ | ----------- |
 | Amazon Music | ❌ | `https://music.amazon.com/podcasts/${uniquePlatformID}` |
 | Antennapod | ✅ | `https://antennapod.org/deeplink/subscribe?url=${feedURL}` |
 | Anytime Player | ✅ | `https://anytimeplayer.app/subscribe?url=${feedURL}` |
@@ -69,8 +69,8 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | TuneIn | ❌ | `https://tunein.com/podcasts/${uniquePlatformID}` |
 
 ## Episode Links
-| Destination | Deterministic | URL Pattern |
-| ----------- | ------------- | ----------- |
+| Platform | Foreign Keys | URL Pattern |
+| -------- | ------------ | ----------- |
 | Apple Podcasts | ❌ | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}` |
 | Bullhorn | ❌ | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}` |
 | Castbox | ❌ | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}` |
@@ -95,8 +95,8 @@ The distributed nature of podcasting makes linking to a show on a given platform
 ## Resource Links
 These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
 
-| Destination | URL Pattern |
-| ----------- | ----------- |
+| Platform | URL Pattern |
+| -------- | ----------- |
 | Listen Notes | `https://listennotes.com/itunes/id${appleID}` |
 | Odesli | `https://pods.link/i/${appleID}` |
 | Plink | `https://plinkhq.com/i/${appleID}?to=page` |
