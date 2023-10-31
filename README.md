@@ -58,7 +58,6 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Podcast Republic | ✅ | `https://www.podcastrepublic.net/podcast/${appleID}` |
 | Podfans | ❌ | `https://podfans.fm/${uniquePlatformID}` |
 | Podfriend | ✅ | `https://web.podfriend.com/podcast/${appleID}` |
-| Podhero | ✅ | `https://podhero.com/podcast/feed/${encodeURIComponent(feedURL)}` |
 | Podknife | ✅ | `https://podknife.com/podcast?feed_url=${feedURL}` |
 | podStation | ✅ | `https://podstation.github.io/subscribe-ext/?feedURL=${appleID}` |
 | Podverse | ✅ | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
@@ -67,21 +66,26 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Spotify | ❌ | `https://open.spotify.com/${uniquePlatformID}` |
 | Steno.fm | ✅ | `https://steno.fm/show/${podcastGUID}` |
 | TuneIn | ❌ | `https://tunein.com/podcasts/${uniquePlatformID}` |
-| YouTube | ❌ | `https://www.youtube.com/playlist?list=${uniquePlatformID}` |
+| YouTube Music | ❌ | `https://music.youtube.com/playlist?list=${uniquePlatformID}` |
 
 ## Episode Links
 | Platform | Foreign Keys | URL Pattern |
 | -------- | ------------ | ----------- |
+| Amazon Music | ❌ | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}` |
 | Apple Podcasts | ❌ | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}` |
 | Bullhorn | ❌ | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}` |
 | Castbox | ❌ | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}` |
 | Castro | ❌ | `https://castro.fm/episode/${uniqueEpisodeID}` |
+| Deezer | ❌ | `https://deezer.page.link/${uniqueEpisodeID}` |
 | Fountain | ✅ | `https://fountain.fm/episode/${podcastIndexEpisodeID}` |
+| Global Player | ❌ | `https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/` |
+| Goodpods | ❌ | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}` |
 | Google Podcasts[^1] | ✅ | `https://podcasts.google.com/?feed=${base64url(feedURL)}&episode=${base64url(episodeGUID)}` |
 | iHeartRadio | ❌ | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}` |
 | Luminary | ❌ | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}` |
 | Overcast | ❌ | `https://overcast.fm/+${uniqueEpisodeID}` |
 | Player FM | ✅ | `https://player.fm/series/${encodeURIComponent(feedURL)}/guid:${encodeURIComponent(episodeGUID)}` |
+| Pocket Casts | ✅ | `https://pca.st/episode/${uniqueEpisodeID}` |
 | Podbean | ❌ | `https://podbean.com/media/share/dir-${uniqueEpisodeID}` |
 | Podcast Addict | ✅ | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}` |
 | Podcast Guru | ❌ | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}` |
@@ -92,6 +96,8 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Sonnet | ❌ | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}` |
 | Spotify | ❌ | `https://open.spotify.com/episode/${uniqueEpisodeID}` |
 | Steno.fm | ✅ | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}` |
+| TuneIn | ❌ | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}` |
+| YouTube Music | ❌ | `https://music.youtube.com/podcast/${uniqueEpisodeID}` |
 
 ## Resource Links
 These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
