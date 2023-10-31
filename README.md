@@ -40,9 +40,10 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | CurioCaster | ✅ | `https://curiocaster.com/podcast/pi${podcastIndexShowID}` |
 | Deezer | ❌ | `https://www.deezer.com/us/show/${uniquePlatformID}` |
 | Fountain | ✅ | `https://fountain.fm/show/${podcastIndexShowID}` |
+| Global Player | ❌ | `https://www.globalplayer.com/podcasts/${uniquePlatformID}` |
 | Goodpods | ✅ | `https://www.goodpods.com/podcasts-aid/${appleID}` |
 | Google Podcasts[^1] | ✅ | `https://podcasts.google.com/?feed=${base64url(feedURL)}` <br> `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedURL)}` |
-| gpodder | ✅ | `http://gpodder.net/subscribe?url=${feedURL}` |
+| gpodder | ✅ | `https://gpodder.net/subscribe?url=${feedURL}` |
 | iHeartRadio | ❌ | `https://iheart.com/podcast/${uniquePlatformID}` |
 | Jam | ✅ | `https://www.listentojam.com/itunes/${appleID}` |
 | Luminary | ❌ | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}` |
@@ -50,7 +51,7 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | Overcast | ✅ | `https://overcast.fm/itunes${appleID}` |
 | Pandora | ❌ | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}` |
 | Player FM | ✅ | `https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}` |
-| Pocket Casts | ✅ | `https://pca.st/itunes/${appleID}` <br> `http://pcasts.in/feed/${feedURL}` |
+| Pocket Casts | ✅ | `https://pca.st/itunes/${appleID}` <br> `https://pcasts.in/feed/${feedURL}` |
 | Podbean | ✅ | `https://www.podbean.com/itunes/${appleID}` |
 | Podcast Addict | ✅ | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}` |
 | Podcast Guru | ✅ | `https://app.podcastguru.io/podcast/${appleID}` |
@@ -62,11 +63,11 @@ The distributed nature of podcasting makes linking to a show on a given platform
 | podStation | ✅ | `https://podstation.github.io/subscribe-ext/?feedURL=${appleID}` |
 | Podverse | ✅ | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Podvine | ✅ | `https://podvine.com/link?feed=${feedURL}` |
-| RadioPublic | ✅ | `https://radiopublic.com/${encodeURIComponent(feedURL)}` |
 | Sonnet | ✅ | `https://sonnet.fm/p/${appleID}` |
 | Spotify | ❌ | `https://open.spotify.com/${uniquePlatformID}` |
 | Steno.fm | ✅ | `https://steno.fm/show/${podcastGUID}` |
 | TuneIn | ❌ | `https://tunein.com/podcasts/${uniquePlatformID}` |
+| YouTube | ❌ | `https://www.youtube.com/playlist?list=${uniquePlatformID}` |
 
 ## Episode Links
 | Platform | Foreign Keys | URL Pattern |
