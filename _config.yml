@@ -1,3 +1,3 @@
 title: "Podcast Platform Links"
-description: "The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide API methods to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys that let us construct URLs with confidence."
+description: "The distributed nature of podcasting makes it complicated to link to a show/episode on a given platform."
 markdown: GFM
