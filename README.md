@@ -1,12 +1,12 @@
 # Podcast Platform Links
-The distributed nature of podcasting makes linking to a show on a given platform complex. Some platforms provide API methods to determine exact URLs, some provide inexact search APIs, and some provide nothing at all. But many platforms support routes based on foreign keys that let us construct URLs with confidence.
+The distributed nature of podcasting makes it complicated to link to a show/episode on a given platform. Some platforms provide [API methods](#api-documentation) to determine exact URLs or nothing at all, but many platforms support routes based on foreign keys that let us construct URLs with confidence.
 
 ## Table of Contents
 1. [Glossary](#glossary)
 1. [Show Links](#show-links)
 1. [Episode Links](#episode-links)
 1. [Resource Links](#resource-links)
-1. [Tips & Tricks](#tips--tricks)
+1. [API Documentation](#api-documentation)
 1. [Contributing](#contributing)
 1. [Footnotes](#footnotes)
 
@@ -113,26 +113,15 @@ These resources also support podcast foreign keys, but their primary purpose may
 | podfollow | `https://podfollow.com/${appleID}` |
 | Podnews | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` |
 
-## Tips & Tricks
-### Request a feedURL from an appleID
-```http
-GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcast
-```
-
-### Request the 300 most-recent Apple Episode IDs from an appleID
-```http
-GET https://itunes.apple.com/lookup?id=${appleID}&entity=podcastEpisode&limit=300
-```
-
-### Request a podcastGUID/podcastIndexShowID from an appleID/feedURL
-[Documentation](https://podcastindex-org.github.io/docs-api/#podcasts)
-```http
-GET https://api.podcastindex.org/api/1.0/podcasts/byitunesid?id=${appleID}
-GET https://api.podcastindex.org/api/1.0/podcasts/byfeedurl?id=${feedURL}
-```
-
-### Check if an RSS feed is listed on Google Podcasts
-[Documentation](https://podnews.net/article/google-podcasts-app-faq#-how-can-i-programmatically-check-that-a-feed-is-in-google-podcasts)
+## API Documentation
+* [Apple Podcasts](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+* [Deezer](https://developers.deezer.com/api/podcast)
+* [Google Podcasts](https://podnews.net/article/google-podcasts-app-faq#-how-can-i-programmatically-check-that-a-feed-is-in-google-podcasts)
+* [Listen Notes](https://www.listennotes.com/api/docs/)
+* [Pocket Casts](https://pocketcasts.com/submit/)
+* [Podcast Index](https://podcastindex-org.github.io/docs-api/#podcasts)
+* [Podchaser](https://api-docs.podchaser.com/docs/overview)
+* [Spotify](https://developer.spotify.com/documentation/web-api)
 
 ## Contributing
 If you have an update to improve this guide, please [fork the repo](https://github.com/nathangathright/podcast-platform-links/fork) and create a pull request. This Markdown document is easily editable from the GitHub web interface without the need to clone the repo locally.
