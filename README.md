@@ -31,7 +31,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Platform | Foreign Keys | URL Pattern |
 | -------- | ------------ | ----------- |
 | Amazon Music | ❌ | `https://music.amazon.com/podcasts/${uniquePlatformID}` |
-| Antennapod | ✅ | `https://antennapod.org/deeplink/subscribe?url=${feedURL}` |
+| AntennaPod | ✅ | `https://antennapod.org/deeplink/subscribe?url=${feedURL}` |
 | Anytime Player | ✅ | `https://anytimeplayer.app/subscribe?url=${feedURL}` |
 | Apple Podcasts | ✅ | `https://podcasts.apple.com/podcast/id${appleID}` |
 | Bullhorn | ✅ | `https://bullhorn.fm/podchaser/itunes/${appleID}` |
