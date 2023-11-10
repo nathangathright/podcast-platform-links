@@ -62,7 +62,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | podStation | ✅ | `https://podstation.github.io/subscribe-ext/?feedURL=${appleID}` |
 | Podverse | ✅ | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Podvine | ✅ | `https://podvine.com/link?feed=${feedURL}` |
-| RadioPublic | ✅ | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}` |
+| RadioPublic | ✅ | `https://radiopublic.com/${encodeURIComponent(feedUrl)}` |
 | Sonnet | ✅ | `https://sonnet.fm/p/${appleID}` |
 | Spotify | ❌ | `https://open.spotify.com/${uniquePlatformID}` |
 | Steno.fm | ✅ | `https://steno.fm/show/${podcastGUID}` |
