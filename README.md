@@ -56,7 +56,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Addict      | ✅            | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}`                                                                               |
 | Podcast Guru        | ✅            | `https://app.podcastguru.io/podcast/${appleID}`                                                                                               |
 | Podcast Republic    | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                                                                                          |
-| Podfans             | ❌            | `https://podfans.fm/${uniquePlatformID}`                                                                                                      |
+| TrueFans            | ❌            | `https://truefans.fm/${uniquePlatformID}`                                                                                                     |
 | Podfriend           | ✅            | `https://web.podfriend.com/podcast/${appleID}`                                                                                                |
 | Podknife            | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                                                                                            |
 | podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${appleID}`                                                                              |
@@ -90,7 +90,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podbean             | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                          |
 | Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                           |
 | Podcast Guru        | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                |
-| Podfans             | ❌            | `https://podfans.fm/${slug}/${uniqueEpisodeID}`                                                   |
+| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
 | Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                 |
 | Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                |
 | Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                  |
