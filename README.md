@@ -59,7 +59,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | TrueFans            | ❌            | `https://truefans.fm/${uniquePlatformID}`                                                                                                     |
 | Podfriend           | ✅            | `https://web.podfriend.com/podcast/${appleID}`                                                                                                |
 | Podknife            | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                                                                                            |
-| podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${appleID}`                                                                              |
+| podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`                                                                              |
 | Podverse            | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}`                                                                   |
 | Podvine             | ✅            | `https://podvine.com/link?feed=${feedURL}`                                                                                                    |
 | RadioPublic         | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}`                                                                                      |
