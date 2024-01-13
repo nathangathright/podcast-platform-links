@@ -56,16 +56,15 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Addict      | ✅            | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}`                                                                               |
 | Podcast Guru        | ✅            | `https://app.podcastguru.io/podcast/${appleID}`                                                                                               |
 | Podcast Republic    | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                                                                                          |
-| TrueFans            | ❌            | `https://truefans.fm/${uniquePlatformID}`                                                                                                     |
 | Podfriend           | ✅            | `https://web.podfriend.com/podcast/${appleID}`                                                                                                |
 | Podknife            | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                                                                                            |
 | podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`                                                                              |
 | Podverse            | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}`                                                                   |
-| Podvine             | ✅            | `https://podvine.com/link?feed=${feedURL}`                                                                                                    |
 | RadioPublic         | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}`                                                                                      |
 | Sonnet              | ✅            | `https://sonnet.fm/p/${appleID}`                                                                                                              |
 | Spotify             | ❌            | `https://open.spotify.com/${uniquePlatformID}`                                                                                                |
 | Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}`                                                                                                        |
+| TrueFans            | ❌            | `https://truefans.fm/${uniquePlatformID}`                                                                                                     |
 | TuneIn              | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                                                                                             |
 | YouTube Music       | ❌            | `https://music.youtube.com/playlist?list=${uniquePlatformID}`                                                                                 |
 
@@ -90,14 +89,13 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podbean             | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                          |
 | Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                           |
 | Podcast Guru        | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                |
-| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
 | Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                 |
-| Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                |
 | Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                  |
 | RadioPublic         | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                       |
 | Sonnet              | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                               |
 | Spotify             | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                             |
 | Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}`                          |
+| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
 | TuneIn              | ❌            | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}`                    |
 | YouTube Music       | ❌            | `https://music.youtube.com/podcast/${uniqueEpisodeID}`                                            |
 
@@ -110,10 +108,12 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Odesli        | `https://pods.link/i/${appleID}`                                                                    |
 | Plink         | `https://plinkhq.com/i/${appleID}?to=page`                                                          |
 | pod.link      | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                         |
+| podcastdetails | `https://podcastdetails.com/?url=${feedURL}`                                                       |
 | Podcast Index | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                            |
 | Podchaser     | `https://podchaser.com/f/pod/${appleID}`                                                            |
 | podfollow     | `https://podfollow.com/${appleID}`                                                                  |
-| Podnews       | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` |
+| Podnews       | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` |
+| Rephonic      | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                 |
 
 ## API Documentation
 * [Apple Podcasts](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
