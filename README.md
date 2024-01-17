@@ -103,18 +103,18 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 ## Resource Links
 These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
 
-| Platform      | URL Pattern                                                                                         |
-|---------------|-----------------------------------------------------------------------------------------------------|
-| Listen Notes  | `https://listennotes.com/itunes/id${appleID}`                                                       |
-| Odesli        | `https://pods.link/i/${appleID}`                                                                    |
-| Plink         | `https://plinkhq.com/i/${appleID}?to=page`                                                          |
-| pod.link      | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                         |
-| Podcast Index | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                            |
-| Podcast Details | `https://podcastdetails.com/?url=${feedURL}` |
-| Podchaser     | `https://podchaser.com/f/pod/${appleID}`                                                            |
-| podfollow     | `https://podfollow.com/${appleID}`                                                                  |
-| Podnews       | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` |
-| Rephonic      | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                 |
+| Platform        | URL Pattern                                                                                                                                           |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Listen Notes    | `https://listennotes.com/itunes/id${appleID}`                                                                                                         |
+| Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
+| Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
+| pod.link        | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                                                                           |
+| Podcast Index   | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                                                                              |
+| Podcast Details | `https://podcastdetails.com/?url=${feedURL}`                                                                                                          |
+| Podchaser       | `https://podchaser.com/f/pod/${appleID}`                                                                                                              |
+| podfollow       | `https://podfollow.com/${appleID}`                                                                                                                    |
+| Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` |
+| Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
 
 ## API Documentation
 * [Apple Podcasts](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
