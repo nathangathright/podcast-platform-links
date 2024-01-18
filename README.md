@@ -117,11 +117,12 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
 | Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
 | pod.link        | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                                                                           |
-| Podcast Index   | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                                                                              |
 | Podcast Details | `https://podcastdetails.com/?url=${feedURL}`                                                                                                          |
+| Podcast Index   | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                                                                              |
 | Podchaser       | `https://podchaser.com/f/pod/${appleID}`                                                                                                              |
 | podfollow       | `https://podfollow.com/${appleID}`                                                                                                                    |
 | Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` |
+| Podyssey        | `https://podyssey.fm/podcast/itunes${appleID}`                                                                                                        |
 | Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
 
 ## API Documentation
