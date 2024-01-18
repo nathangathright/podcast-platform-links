@@ -35,6 +35,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Anytime Player      | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                                                                                          |
 | Apple Podcasts      | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                                                                                             |
 | Bullhorn            | ✅            | `https://bullhorn.fm/podchaser/itunes/${appleID}`                                                                                             |
+| Castamatic          | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                                                                                  |
 | Castbox             | ✅            | `https://castbox.fm/vic/${appleID}`                                                                                                           |
 | Castro              | ✅            | `https://castro.fm/itunes/${appleID}`                                                                                                         |
 | CurioCaster         | ✅            | `https://curiocaster.com/podcast/pi${podcastIndexShowID}`                                                                                     |
@@ -77,6 +78,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Amazon Music        | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`               |
 | Apple Podcasts      | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                            |
 | Bullhorn            | ❌            | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`                                |
+| Castamatic          | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                      |
 | Castbox             | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                   |
 | Castro              | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                    |
 | Deezer              | ❌            | `https://deezer.page.link/${uniqueEpisodeID}`                                                     |
