@@ -106,7 +106,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Sonnet              | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                               |
 | Spotify             | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                             |
 | Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}`                          |
-| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
+| TrueFans            | ✅            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
 | TuneIn              | ❌            | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}`                    |
 | YouTube Music       | ❌            | `https://music.youtube.com/podcast/${uniqueEpisodeID}`                                            |
 
