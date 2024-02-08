@@ -39,7 +39,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Castbox             | ✅            | `https://castbox.fm/vic/${appleID}`                                                                                                           |
 | Castro              | ✅            | `https://castro.fm/itunes/${appleID}`                                                                                                         |
 | CurioCaster         | ✅            | `https://curiocaster.com/podcast/pi${podcastIndexShowID}`                                                                                     |
-| Deezer              | ❌            | `https://www.deezer.com/us/show/${uniquePlatformID}`                                                                                          |
+| Deezer              | ❌            | `https://www.deezer.com/show/${uniquePlatformID}`                                                                                             |
 | Fountain            | ✅            | `https://fountain.fm/show/${podcastIndexShowID}`                                                                                              |
 | Global Player       | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                                                                                   |
 | Goodpods            | ✅            | `https://www.goodpods.com/podcasts-aid/${appleID}`                                                                                            |
@@ -81,7 +81,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Castamatic          | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                      |
 | Castbox             | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                   |
 | Castro              | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                    |
-| Deezer              | ❌            | `https://deezer.page.link/${uniqueEpisodeID}`                                                     |
+| Deezer              | ❌            | `https://www.deezer.com/episode/${uniqueEpisodeID}`                                               |
 | Fountain            | ✅            | `https://fountain.fm/episode/${podcastIndexEpisodeID}`                                            |
 | Global Player       | ❌            | `https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/`                              |
 | Goodpods            | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                            |
