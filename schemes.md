@@ -38,7 +38,7 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Goodpods        | `goodpods://`                                                                |
 | Google Podcasts | `googlepodcasts://${deepLink}`                                               |
 | gPodder         | `gpodder://${feedURL}`                                                       |
-| Hark Audio      | `com.harkaudio.podcast://`                                                   |
+| Hark            | `com.harkaudio.podcast://`                                                   |
 | iCatcher!       | `icatcher://${feedURL}`                                                      |
 | iHeartRadio     | `iheartradio://`                                                             |
 | Instacast       | `instacast://${feedURL}`                                                     |
