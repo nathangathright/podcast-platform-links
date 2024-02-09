@@ -63,7 +63,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podknife            | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                                                                                            |
 | podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`                                                                              |
 | Podverse            | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}`                                                                   |
-| RadioPublic         | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}`                                                                                      |
+| RadioPublic[^2]     | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}`                                                                                      |
 | Snipd               | ❌            | `https://share.snipd.com/show/${uniquePlatformID}`                                                                                            |
 | Sonnet              | ✅            | `https://sonnet.fm/p/${appleID}`                                                                                                              |
 | Spotify             | ❌            | `https://open.spotify.com/${uniquePlatformID}`                                                                                                |
@@ -101,7 +101,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                 |
 | Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                |
 | Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                  |
-| RadioPublic         | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                       |
+| RadioPublic[^2]     | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                       |
 | Snipd               | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                             |
 | Sonnet              | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                               |
 | Spotify             | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                             |
@@ -143,3 +143,4 @@ If you have an update to improve this guide, please [fork the repo](https://gith
 
 ## Footnotes
 [^1]: [Google Podcasts to shut down in 2024 with listeners migrated to YouTube Music](https://techcrunch.com/2023/09/26/google-podcasts-to-shut-down-in-2024-with-listeners-migrated-to-youtube-music/)
+[^2]: [RadioPublic is to close on March 31, 2024](https://podnews.net/uploads/radiopublic-closure.png)
