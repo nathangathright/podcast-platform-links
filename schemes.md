@@ -36,7 +36,6 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Gaana           | `gaana://`                                                                   |
 | Global Player   | `fb166993440513641://`                                                       |
 | Goodpods        | `goodpods://`                                                                |
-| Goodpods        | `goodpods://`                                                                |
 | Google Podcasts | `googlepodcasts://${deepLink}`                                               |
 | gPodder         | `gpodder://${feedURL}`                                                       |
 | Hark Audio      | `com.harkaudio.podcast://`                                                   |
@@ -49,12 +48,12 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Moon FM         | `moonfm://`                                                                  |
 | Overcast[^1]    | `overcast://x-callback-url/add?url=${feedURL}` <br> `overcast://${deepLink}` |
 | Pandora         | `pandora://`                                                                 |
-| Player FM       | `playerfm://`                                                                |
+| Player FM       | `playerfm://${feedURL}`                                                      |
 | Pocket Casts    | `pktc://subscribe/${feedURL}`                                                |
 | Podbean         | `podbean://`                                                                 |
 | Podcast Addict  | `podcastaddict://${feedURL}`                                                 |
 | Podcast App     | `podcastapp://`                                                              |
-| Podcast Guru    | `podcastguru://`                                                             |
+| Podcast Guru    | `podcastguru://${feedURL}`                                                   |
 | Podcat          | `podcat://${feedURL}`                                                        |
 | Podimo          | `podimo://`                                                                  |
 | Podkicker       | `podkicker://subscribe/${feedURL}`                                           |
