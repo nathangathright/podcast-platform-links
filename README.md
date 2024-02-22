@@ -68,7 +68,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Sonnet              | ✅            | `https://sonnet.fm/p/${appleID}`                                                                                                              |
 | Spotify             | ❌            | `https://open.spotify.com/${uniquePlatformID}`                                                                                                |
 | Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}`                                                                                                        |
-| TrueFans            | ❌            | `https://truefans.fm/${podcastGUID}`                                                                                                          |
+| TrueFans            | ✅            | `https://truefans.fm/${podcastGUID}`                                                                                                          |
 | TuneIn              | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                                                                                             |
 | YouTube Music       | ❌            | `https://music.youtube.com/playlist?list=${uniquePlatformID}`                                                                                 |
 
