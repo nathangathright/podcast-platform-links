@@ -61,7 +61,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast App         | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                                                                                            |
 | Podcast Guru        | ✅            | `https://app.podcastguru.io/podcast/${appleID}`                                                                                               |
 | Podcast Republic    | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                                                                                          |
-| Podfriend           | ✅            | `https://web.podfriend.com/podcast/${appleID}`                                                                                                |
+| Podfriend           | ✅            | `https://podfriend.com/podcast/${appleID}`                                                                                                    |
 | Podknife            | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                                                                                            |
 | podStation          | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`                                                                              |
 | Podverse            | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}`                                                                   |
@@ -101,7 +101,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                                    |
 | Podcast App         | ❌            | `https://podcast.app/${slug}-e${uniqueEpisodeID}`                                                          |
 | Podcast Guru        | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                         |
-| Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                          |
+| Podfriend           | ✅            | `https://podfriend.com/podcast/${appleID}/${encodeURIComponent(episodeGUID)}`                              |
 | Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                         |
 | Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
 | RadioPublic[^2]     | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                                |
