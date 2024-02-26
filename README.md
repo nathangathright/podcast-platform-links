@@ -23,9 +23,10 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 * `podcastIndexEpisodeID`: An ID assigned by the Podcast Index to each episode in their directory.
 
 ### Other
+* `base64url()`: A method of encoding strings using a [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
+* `encodeURIComponent()`: A method of encoding strings by replacing special characters with [their UTF-8 encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1).
 * `slug`: In this context, a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. 
 * `uniquePlatformID` and `uniqueEpisodeID`: A platform-specific identifier that may only be obtained via API or not at all.
-* `base64url()`: A [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
 
 ## Show Links
 | Platform            | Foreign Keys | URL Pattern                                                                                                                                   |
