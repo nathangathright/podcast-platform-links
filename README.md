@@ -34,6 +34,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | AntennaPod          | ✅            | `https://antennapod.org/deeplink/subscribe?url=${feedURL}`                                                                                    |
 | Anytime Player      | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                                                                                          |
 | Apple Podcasts      | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                                                                                             |
+| Breez               | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}`                                                                                 |
 | Bullhorn            | ✅            | `https://bullhorn.fm/podchaser/itunes/${appleID}`                                                                                             |
 | Castamatic          | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                                                                                  |
 | Castbox             | ✅            | `https://castbox.fm/vic/${appleID}`                                                                                                           |
@@ -73,42 +74,43 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | YouTube Music       | ❌            | `https://music.youtube.com/playlist?list=${uniquePlatformID}`                                                                                 |
 
 ## Episode Links
-| Platform            | Foreign Keys | URL Pattern                                                                                       |
-|---------------------|--------------|---------------------------------------------------------------------------------------------------|
-| Amazon Music        | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`               |
-| Apple Podcasts      | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                            |
-| Bullhorn            | ❌            | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`                                |
-| Castamatic          | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                      |
-| Castbox             | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                   |
-| Castro              | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                    |
-| Deezer              | ❌            | `https://www.deezer.com/episode/${uniqueEpisodeID}`                                               |
-| Fountain            | ✅            | `https://fountain.fm/episode/${podcastIndexEpisodeID}`                                            |
-| Global Player       | ❌            | `https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/`                              |
-| Goodpods            | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                            |
-| Google Podcasts[^1] | ✅            | `https://podcasts.google.com/?feed=${base64url(feedURL)}&episode=${base64url(episodeGUID)}`       |
-| Hark                | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                  |
-| iHeartRadio         | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`       |
-| Jam                 | ❌            | `https://www.listentojam.com/jam/${uniquePlatformID}/${uniqueEpisodeID}`                          |
-| Luminary            | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`      |
-| Overcast            | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                         |
-| Pandora             | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                               |
-| Player FM           | ✅            | `https://player.fm/series/${encodeURIComponent(feedURL)}/guid:${encodeURIComponent(episodeGUID)}` |
-| Pocket Casts        | ❌            | `https://pca.st/episode/${uniqueEpisodeID}`                                                       |
-| Podbean             | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                          |
-| Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                           |
-| Podcast App         | ❌            | `https://podcast.app/${slug}-e${uniqueEpisodeID}`                                                 |
-| Podcast Guru        | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                |
-| Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                 |
-| Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                |
-| Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                  |
-| RadioPublic[^2]     | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                       |
-| Snipd               | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                             |
-| Sonnet              | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                               |
-| Spotify             | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                             |
-| Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}`                          |
-| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                  |
-| TuneIn              | ❌            | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}`                    |
-| YouTube Music       | ❌            | `https://music.youtube.com/podcast/${uniqueEpisodeID}`                                            |
+| Platform            | Foreign Keys | URL Pattern                                                                                                |
+|---------------------|--------------|------------------------------------------------------------------------------------------------------------|
+| Amazon Music        | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`                        |
+| Apple Podcasts      | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                                     |
+| Breez               | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}&episodeID=${encodeURIComponent(episodeGUID)}` |
+| Bullhorn            | ❌            | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`                                         |
+| Castamatic          | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                               |
+| Castbox             | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                            |
+| Castro              | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                             |
+| Deezer              | ❌            | `https://www.deezer.com/episode/${uniqueEpisodeID}`                                                        |
+| Fountain            | ✅            | `https://fountain.fm/episode/${podcastIndexEpisodeID}`                                                     |
+| Global Player       | ❌            | `https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/`                                       |
+| Goodpods            | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                                     |
+| Google Podcasts[^1] | ✅            | `https://podcasts.google.com/?feed=${base64url(feedURL)}&episode=${base64url(episodeGUID)}`                |
+| Hark                | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                           |
+| iHeartRadio         | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
+| Jam                 | ❌            | `https://www.listentojam.com/jam/${uniquePlatformID}/${uniqueEpisodeID}`                                   |
+| Luminary            | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
+| Overcast            | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
+| Pandora             | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                                        |
+| Player FM           | ✅            | `https://player.fm/series/${encodeURIComponent(feedURL)}/guid:${encodeURIComponent(episodeGUID)}`          |
+| Pocket Casts        | ❌            | `https://pca.st/episode/${uniqueEpisodeID}`                                                                |
+| Podbean             | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                                   |
+| Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                                    |
+| Podcast App         | ❌            | `https://podcast.app/${slug}-e${uniqueEpisodeID}`                                                          |
+| Podcast Guru        | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                         |
+| Podfriend           | ❌            | `https://web.podfriend.com/podcast/${appleID}/${uniqueEpisodeID}`                                          |
+| Podknife            | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                         |
+| Podverse            | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
+| RadioPublic[^2]     | ✅            | `https://radiopublic.com/${encodeURIComponent(feedUrl)}/${uniqueEpisodeID}`                                |
+| Snipd               | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                                      |
+| Sonnet              | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                                        |
+| Spotify             | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                                      |
+| Steno.fm            | ✅            | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}`                                   |
+| TrueFans            | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                           |
+| TuneIn              | ❌            | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}`                             |
+| YouTube Music       | ❌            | `https://music.youtube.com/podcast/${uniqueEpisodeID}`                                                     |
 
 ## Resource Links
 These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
