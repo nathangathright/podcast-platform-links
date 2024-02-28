@@ -46,7 +46,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Global Player       | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                                                                                   |
 | Goodpods            | ✅            | `https://www.goodpods.com/podcasts-aid/${appleID}`                                                                                            |
 | Google Podcasts[^1] | ✅            | `https://podcasts.google.com/?feed=${base64url(feedURL)}` <br> `https://podcasts.google.com/subscribe-by-rss-feed?feed=${base64url(feedURL)}` |
-| gpodder             | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                                                                                                |
+| gPodder             | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                                                                                                |
 | Hark                | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                                                                                                 |
 | iHeartRadio         | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                                                                                              |
 | Jam                 | ✅            | `https://www.listentojam.com/itunes/${appleID}`                                                                                               |
