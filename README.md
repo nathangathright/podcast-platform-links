@@ -95,7 +95,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Luminary            | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
 | Overcast            | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
 | Pandora             | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                                        |
-| Player FM           | ✅            | `https://player.fm/series/${encodeURIComponent(feedURL)}/guid:${encodeURIComponent(episodeGUID)}`          |
+| Player FM           | ❌            | `https://player.fm/series/${uniquePlatformID}/${uniqueEpisodeID}`                                          |
 | Pocket Casts        | ❌            | `https://pca.st/episode/${uniqueEpisodeID}`                                                                |
 | Podbean             | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                                   |
 | Podcast Addict      | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                                    |
