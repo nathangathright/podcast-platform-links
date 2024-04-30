@@ -36,7 +36,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Anytime Player      | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                                                                                          |
 | Apple Podcasts      | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                                                                                             |
 | Breez               | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}`                                                                                 |
-| Bullhorn            | ✅            | `https://bullhorn.fm/podchaser/itunes/${appleID}`                                                                                             |
 | Castamatic          | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                                                                                  |
 | Castbox             | ✅            | `https://castbox.fm/vic/${appleID}`                                                                                                           |
 | Castro              | ✅            | `https://castro.fm/itunes/${appleID}`                                                                                                         |
