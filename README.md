@@ -120,6 +120,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Listen Notes    | `https://listennotes.com/itunes/id${appleID}`                                                                                                         |
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
 | Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
+| Pod Engine      | `https://www.podengine.ai/podcasts/id/${appleID}`                                                                                                     |
 | pod.link        | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                                                                           |
 | Podcast Details | `https://podcastdetails.com/?url=${feedURL}`                                                                                                          |
 | Podcast Index   | `https://podcastindex.org/podcast/${podcastIndexShowID}`                                                                                              |
