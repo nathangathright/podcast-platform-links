@@ -1,6 +1,8 @@
 # Podcast Platform Links
 The distributed nature of podcasting makes it complicated to link to a show/episode on a given platform. Some platforms provide [API methods](#api-documentation) to determine exact URLs or nothing at all, but many platforms support routes based on foreign keys that let us construct URLs with confidence.
 
+* Need [badges to help you link](https://github.com/nathangathright/podcast-badges)?
+
 ## Table of Contents
 1. [Glossary](#glossary)
 1. [Show Links](#show-links)
