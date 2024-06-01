@@ -34,6 +34,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Amazon Music        | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}`                                                                                       |
 | AntennaPod          | ✅            | `https://antennapod.org/deeplink/subscribe?url=${feedURL}`                                                                                    |
 | Anytime Player      | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                                                                                          |
+| Apollo              | ✅            | `https://shows.apollopods.com/show?feedUrl=${feedURL}`<br>For fiction podcasts only                                                           |
 | Apple Podcasts      | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                                                                                             |
 | Breez               | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}`                                                                                 |
 | Castamatic          | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                                                                                  |
