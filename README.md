@@ -34,7 +34,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Amazon Music        | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}`                                                                                       |
 | AntennaPod          | ✅            | `https://antennapod.org/deeplink/subscribe?url=${feedURL}`                                                                                    |
 | Anytime Player      | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                                                                                          |
-| Apollo              | ✅            | `https://shows.apollopods.com/show?feedUrl=${feedURL}`<br>For fiction podcasts only                                                           |
+| Apollo[^1]          | ✅            | `https://shows.apollopods.com/show?feedUrl=${feedURL}`                                                                                        |
 | Apple Podcasts      | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                                                                                             |
 | Breez               | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}`                                                                                 |
 | Castamatic          | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                                                                                  |
@@ -146,5 +146,6 @@ These resources also support podcast foreign keys, but their primary purpose may
 If you have an update to improve this guide, please [fork the repo](https://github.com/nathangathright/podcast-platform-links/fork) and create a pull request. This Markdown document is easily editable from the GitHub web interface without the need to clone the repo locally.
 
 ## Footnotes
+[^1]: For fiction podcasts only
 [^1]: [Google Podcasts to shut down in 2024 with listeners migrated to YouTube Music](https://techcrunch.com/2023/09/26/google-podcasts-to-shut-down-in-2024-with-listeners-migrated-to-youtube-music/)
 [^2]: [RadioPublic is to close on March 31, 2024](https://podnews.net/uploads/radiopublic-closure.png)
