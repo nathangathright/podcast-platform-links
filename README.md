@@ -49,6 +49,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
 | Jam              | ✅            | `https://www.listentojam.com/itunes/${appleID}`                             |
+| LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
 | Luminary         | ❌            | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`   |
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
 | Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
@@ -63,6 +64,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podfriend        | ✅            | `https://podfriend.com/podcast/${appleID}`                                  |
 | Podknife         | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                          |
 | podStation       | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`            |
+| Podurama         | ✅            | `https://podurama.com/podcast/${slug}-i${appleID}`                          |
 | Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Snipd            | ❌            | `https://share.snipd.com/show/${uniquePlatformID}`                          |
 | Sonnet           | ✅            | `https://sonnet.fm/p/${appleID}`                                            |
@@ -89,6 +91,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Hark           | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                           |
 | iHeartRadio    | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
 | Jam            | ❌            | `https://www.listentojam.com/jam/${uniquePlatformID}/${uniqueEpisodeID}`                                   |
+| LN Beats       | ❌            | `https://lnbeats.com/album/${podcastGUID}/${uniqueEpisodeID}`                                              |
 | Luminary       | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
 | Overcast       | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
 | Pandora        | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                                        |
@@ -100,6 +103,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Guru   | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                         |
 | Podfriend      | ✅            | `https://podfriend.com/podcast/${appleID}/${encodeURIComponent(episodeGUID)}`                              |
 | Podknife       | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                         |
+| Podurama       | ❌            | `https://podurama.com/episode/${uniqueEpisodeID}`                                                          |
 | Podverse       | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
 | Snipd          | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                                      |
 | Sonnet         | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                                        |
@@ -114,6 +118,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 
 | Platform        | URL Pattern                                                                                                                                           |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Episodes.fm     | `https://episodes.fm/${appleID}` <br> `https://episodes.fm/${appleID}/episode/${base64url(episodeGUID)}`                                              |
 | Listen Notes    | `https://listennotes.com/itunes/id${appleID}`                                                                                                         |
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
 | Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
