@@ -48,7 +48,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | gPodder          | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                              |
 | Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
-| Jam              | ✅            | `https://www.listentojam.com/itunes/${appleID}`                             |
 | LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
 | Luminary         | ❌            | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`   |
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
@@ -90,7 +89,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Goodpods       | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                                     |
 | Hark           | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                           |
 | iHeartRadio    | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
-| Jam            | ❌            | `https://www.listentojam.com/jam/${uniquePlatformID}/${uniqueEpisodeID}`                                   |
 | LN Beats       | ❌            | `https://lnbeats.com/album/${podcastGUID}/${uniqueEpisodeID}`                                              |
 | Luminary       | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
 | Overcast       | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
