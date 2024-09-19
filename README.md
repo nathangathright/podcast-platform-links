@@ -132,7 +132,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
 
 ## API Documentation
-* [Apple Podcasts](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+* [Apple Podcasts](https://performance-partners.apple.com/search-api)
 * [Deezer](https://developers.deezer.com/api/podcast)
 * [Listen Notes](https://www.listennotes.com/api/docs/)
 * [Pocket Casts](https://pocketcasts.com/submit/)
