@@ -62,6 +62,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
 | Podfriend        | ✅            | `https://podfriend.com/podcast/${appleID}`                                  |
 | Podknife         | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                          |
+| PodLP            | ✅            | `https://link.podlp.app/${appleID}`<br>`https://link.podlp.app/${podcastGUID}`|
 | podStation       | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`            |
 | Podurama         | ✅            | `https://podurama.com/podcast/${slug}-i${appleID}`                          |
 | Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
