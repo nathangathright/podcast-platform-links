@@ -72,7 +72,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Steno.fm         | ✅            | `https://steno.fm/show/${podcastGUID}`                                      |
 | TrueFans         | ✅            | `https://truefans.fm/${podcastGUID}`                                        |
 | TuneIn           | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                           |
-| YouTube Music    | ❌            | `https://music.youtube.com/playlist?list=${uniquePlatformID}`               |
+| YouTube Music    | ✅            | `https://music.youtube.com/library/podcasts?addrssfeed=${base64url(feedURL}`<br>`https://music.youtube.com/playlist?list=${uniquePlatformID}`|
 
 ## Episode Links
 | Platform       | Foreign Keys | URL Pattern                                                                                                |
