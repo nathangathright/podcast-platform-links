@@ -26,7 +26,7 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Audacy          | `audacy://`                                                                  |
 | Audible         | `audible://${deepLink}`                                                      |
 | Bullhorn        | `bullhorn://`                                                                |
-| Castamatic      | `castamatic://`                                                              |
+| Castamatic      | `castamatic://${feedURL}`                                                              |
 | Castbox         | `castbox://`                                                                 |
 | Castro          | `castros://subscribe/${feedURL}`                                             |
 | Deezer          | `deezer://${deepLink}`                                                       |
