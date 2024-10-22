@@ -54,7 +54,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
 | Pandora          | ❌            | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`                |
 | Player FM        | ✅            | `https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}`             |
-| Pocket Casts     | ✅            | `https://pca.st/itunes/${appleID}` <br> `https://pcasts.in/feed/${feedURL}` |
+| Pocket Casts     | ✅            | `https://pca.st/itunes/${appleID}`                                          |
 | Podbean          | ✅            | `https://www.podbean.com/itunes/${appleID}`                                 |
 | Podcast Addict   | ✅            | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}`             |
 | Podcast App      | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                          |
