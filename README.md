@@ -23,6 +23,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 * `podcastIndexEpisodeID`: An ID assigned by the Podcast Index to each episode in their directory.
 
 ### Other
+* `base16()` or `hex()`: A method of encoding strings using a [hexadecimal numeral system](https://datatracker.ietf.org/doc/html/rfc4648#section-8).
 * `base64url()`: A method of encoding strings using a [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
 * `encodeURIComponent()`: A method of encoding strings by replacing special characters with [their UTF-8 encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1).
 * `slug`: In this context, a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. 
@@ -58,7 +59,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podbean          | ✅            | `https://www.podbean.com/itunes/${appleID}`                                 |
 | Podcast Addict   | ✅            | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}`             |
 | Podcast App      | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                          |
-| Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`                             |
+| Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`<br>`https://app.podcastguru.io/podcast/X${hex(feedURL)}`|
 | Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
 | Podfriend        | ✅            | `https://podfriend.com/podcast/${appleID}`                                  |
 | Podknife         | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                          |
