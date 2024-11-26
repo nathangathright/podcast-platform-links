@@ -42,6 +42,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Castbox          | ✅            | `https://castbox.fm/vic/${appleID}`                                         |
 | Castro           | ✅            | `https://castro.fm/itunes/${appleID}`                                       |
 | CurioCaster      | ✅            | `https://curiocaster.com/podcast/pi${podcastIndexShowID}`                   |
+| DeepCast         | ✅            | `https://deepcast.fm/itunes/${appleID}`                                     |
 | Deezer           | ❌            | `https://www.deezer.com/show/${uniquePlatformID}`                           |
 | Fountain         | ✅            | `https://fountain.fm/show/${podcastIndexShowID}`                            |
 | Global Player    | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                 |
