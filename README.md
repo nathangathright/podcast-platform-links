@@ -42,7 +42,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Castbox          | ✅            | `https://castbox.fm/vic/${appleID}`                                         |
 | Castro           | ✅            | `https://castro.fm/itunes/${appleID}`                                       |
 | CurioCaster      | ✅            | `https://curiocaster.com/podcast/pi${podcastIndexShowID}`                   |
-| DeepCast         | ✅            | `https://deepcast.fm/guid/${podcastGUID}`<br>`https://deepcast.fm/rss/${encodeURIComponent(feedURL)}`<br>`https://deepcast.fm/itunes/${appleID}` |
 | Deezer           | ❌            | `https://www.deezer.com/show/${uniquePlatformID}`                           |
 | Fountain         | ✅            | `https://fountain.fm/show/${podcastIndexShowID}`                            |
 | Global Player    | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                 |
@@ -119,6 +118,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 
 | Platform        | URL Pattern                                                                                                                                           |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DeepCast        | `https://deepcast.fm/guid/${podcastGUID}` <br> `https://deepcast.fm/rss/${encodeURIComponent(feedURL)}` <br> `https://deepcast.fm/itunes/${appleID}`  |
 | Episodes.fm     | `https://episodes.fm/${appleID}` <br> `https://episodes.fm/${appleID}/episode/${base64url(episodeGUID)}`                                              |
 | Listen Notes    | `https://listennotes.com/itunes/id${appleID}`                                                                                                         |
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
