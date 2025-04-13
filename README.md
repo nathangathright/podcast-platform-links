@@ -32,6 +32,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 ## Show Links
 | Platform         | Foreign Keys | URL Pattern                                                                 |
 |------------------|--------------|-----------------------------------------------------------------------------|
+| 1tuner           | ✅            | `https://1tuner.com/podcast/${slug}/${base64url(feedURL)}`                  |
 | Amazon Music     | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}`                     |
 | AntennaPod       | ✅            | `https://antennapod.org/deeplink/subscribe?url=${feedURL}`                  |
 | Anytime Player   | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                        |
@@ -78,6 +79,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 ## Episode Links
 | Platform       | Foreign Keys | URL Pattern                                                                                                |
 |----------------|--------------|------------------------------------------------------------------------------------------------------------|
+| 1tuner         | ✅            | `https://1tuner.com/podcast/${slug}/${base64url(feedURL)}/${encodeURIComponent(episodeGUID)}`              |
 | Amazon Music   | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`                        |
 | Apple Podcasts | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                                     |
 | Breez          | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}&episodeID=${encodeURIComponent(episodeGUID)}` |
