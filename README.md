@@ -51,6 +51,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
 | LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
 | Luminary         | ❌            | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`   |
+| Metacast         | ✅            | `https://metacast.app/itunes/${appleID}`                                    |
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
 | Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
 | Pandora          | ❌            | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`                |
