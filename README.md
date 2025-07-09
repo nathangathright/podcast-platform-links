@@ -70,7 +70,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Snipd            | ❌            | `https://share.snipd.com/show/${uniquePlatformID}`                          |
 | Sonnet           | ✅            | `https://sonnet.fm/p/${appleID}`                                            |
-| Spotify          | ❌            | `https://open.spotify.com/${uniquePlatformID}`                              |
+| Spotify          | ❌            | `https://open.spotify.com/show/${uniquePlatformID}`                              |
 | Steno.fm         | ✅            | `https://steno.fm/show/${podcastGUID}`                                      |
 | TrueFans         | ✅            | `https://truefans.fm/${podcastGUID}`                                        |
 | TuneIn           | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                           |
