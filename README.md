@@ -51,7 +51,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
 | LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
 | Luminary         | ❌            | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`   |
-| Metacast         | ✅            | `https://metacast.app/itunes/${appleID}`<br>`https://metacast.app/podcast/{slug}/{uniquePlatformID}`<br>`https://open.metacast.app/podcasts/{podcastGUID}`|
+| Metacast         | ✅            | `https://metacast.app/itunes/${appleID}`<br>`https://open.metacast.app/podcasts/{podcastGUID}`|
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
 | Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
 | Pandora          | ❌            | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`                |
@@ -95,7 +95,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | iHeartRadio    | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
 | LN Beats       | ❌            | `https://lnbeats.com/album/${podcastGUID}/${uniqueEpisodeID}`                                              |
 | Luminary       | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
-| Metacast       | ❌            | `https://metacast.app/podcast/{slug]/{uniquePlatformID}/{slug}/{uniqueEpisodeID}`<br>`https://open.metacast.app/podcasts/episode/{uniqueEpisodeID}`|
+| Metacast       | ❌            | `https://open.metacast.app/podcasts/episode/{uniqueEpisodeID}`                                             |
 | Overcast       | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
 | Pandora        | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                                        |
 | Player FM      | ❌            | `https://player.fm/series/${uniquePlatformID}/${uniqueEpisodeID}`                                          |
