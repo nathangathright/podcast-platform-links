@@ -62,7 +62,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast App      | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                          |
 | Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`<br>`https://app.podcastguru.io/podcast/X${hex(feedURL)}`|
 | Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
-| Podfriend        | ✅            | `https://podfriend.com/podcast/${appleID}`                                  |
 | Podknife         | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                          |
 | PodLP            | ✅            | `https://link.podlp.app/${appleID}`<br>`https://link.podlp.app/${podcastGUID}`|
 | podStation       | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`            |
@@ -121,8 +120,6 @@ These resources also support podcast foreign keys, but their primary purpose may
 
 | Platform        | URL Pattern                                                                                                                                           |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Episodes.fm     | `https://episodes.fm/${appleID}` <br> `https://episodes.fm/${appleID}/episode/${base64url(episodeGUID)}`                                              |
-| Listen Notes    | `https://listennotes.com/itunes/id${appleID}`                                                                                                         |
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
 | Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
 | Pod Engine      | `https://www.podengine.ai/podcasts/id/${appleID}`                                                                                                     |
@@ -132,7 +129,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Podcast X-Ray   | `https://podcastxray.com/podcast/${appleID}`                                                                                                          |
 | Podchaser       | `https://podchaser.com/f/pod/${appleID}`                                                                                                              |
 | podfollow       | `https://podfollow.com/${appleID}`                                                                                                                    |
-| Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` |
+| Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` <br> `https://podnews.net/podcast/${spotifyID}` |
 | Podyssey        | `https://podyssey.fm/podcast/itunes${appleID}`                                                                                                        |
 | Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
 
