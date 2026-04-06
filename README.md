@@ -47,6 +47,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Global Player    | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                 |
 | Goodpods         | ✅            | `https://www.goodpods.com/podcasts-aid/${appleID}`                          |
 | gPodder          | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                              |
+| Great Pods       | ✅            | `https://greatpods.co/podcasts?podcastIndexId=${podcastIndexShowID}` <br> `https://greatpods.co/podcasts?itunesId=${appleID}` |
 | Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
 | LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
@@ -120,6 +121,7 @@ These resources also support podcast foreign keys, but their primary purpose may
 
 | Platform        | URL Pattern                                                                                                                                           |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Great Pods      | `https://www.greatpods.co/podcasts?podcastIndexId=${podcastIndexShowID}` <br> `https://www.greatpods.co/podcasts?itunesId=${appleID}` |
 | Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
 | Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
 | Pod Engine      | `https://www.podengine.ai/podcasts/id/${appleID}`                                                                                                     |
