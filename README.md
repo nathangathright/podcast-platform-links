@@ -47,7 +47,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Global Player    | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                 |
 | Goodpods         | ✅            | `https://www.goodpods.com/podcasts-aid/${appleID}`                          |
 | gPodder          | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                              |
-| Great Pods       | ✅            | `https://greatpods.co/podcasts?podcastIndexId=${podcastIndexShowID}` <br> `https://greatpods.co/podcasts?itunesId=${appleID}` |
 | Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
 | LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
@@ -70,7 +69,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Snipd            | ❌            | `https://share.snipd.com/show/${uniquePlatformID}`                          |
 | Sonnet           | ✅            | `https://sonnet.fm/p/${appleID}`                                            |
-| Spotify          | ❌            | `https://open.spotify.com/show/${uniquePlatformID}`                              |
+| Spotify          | ❌            | `https://open.spotify.com/show/${uniquePlatformID}`                         |
 | Steno.fm         | ✅            | `https://steno.fm/show/${podcastGUID}`                                      |
 | TrueFans         | ✅            | `https://truefans.fm/${podcastGUID}`                                        |
 | TuneIn           | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                           |
