@@ -66,6 +66,7 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Soundcloud      | `soundcloud://`                                                              |
 | Spotify         | `spotify://`                                                                 |
 | Spreaker        | `spreaker://`                                                                |
+| The Podcast App | `thepodcastapp://`                                                           |
 | TuneIn          | `tunein://`                                                                  |
 | Wondery         | `wondery://`                                                                 |
 | YouTube         | `youtube://${deepLink}`                                                      |
