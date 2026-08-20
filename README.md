@@ -49,7 +49,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | gPodder          | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                              |
 | Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
 | iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
-| LN Beats         | ✅            | `https://lnbeats.com/album/${podcastGUID}`                                  |
 | Luminary         | ❌            | `https://luminarypodcasts.com/listen/${slug}/${slug}/${uniquePlatformID}`   |
 | Metacast         | ✅            | `https://metacast.app/itunes/${appleID}`<br>`https://open.metacast.app/podcasts/{podcastGUID}`|
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
@@ -62,7 +61,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast App      | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                          |
 | Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`<br>`https://app.podcastguru.io/podcast/X${hex(feedURL)}`|
 | Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
-| Podknife         | ✅            | `https://podknife.com/podcast?feed_url=${feedURL}`                          |
 | PodLP            | ✅            | `https://link.podlp.app/${appleID}`<br>`https://link.podlp.app/${podcastGUID}`|
 | podStation       | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`            |
 | Podurama         | ✅            | `https://podurama.com/podcast/${slug}-i${appleID}`                          |
@@ -82,7 +80,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Amazon Music   | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`                        |
 | Apple Podcasts | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                                     |
 | Breez          | ✅            | `https://breez.link/p?feedURL=${encodeURIComponent(feedURL)}&episodeID=${encodeURIComponent(episodeGUID)}` |
-| Bullhorn       | ❌            | `https://bullhorn.fm/${uniquePlatformID}/posts/${uniqueEpisodeID}`                                         |
 | Castamatic     | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                               |
 | Castbox        | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                            |
 | Castro         | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                             |
@@ -92,7 +89,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Goodpods       | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                                     |
 | Hark           | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                           |
 | iHeartRadio    | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
-| LN Beats       | ❌            | `https://lnbeats.com/album/${podcastGUID}/${uniqueEpisodeID}`                                              |
 | Luminary       | ❌            | `https://luminarypodcasts.com/listen/${slug}/${uniquePlatformID}/${slug}/${uniqueEpisodeID}`               |
 | Metacast       | ❌            | `https://open.metacast.app/podcasts/episode/{uniqueEpisodeID}`                                             |
 | Overcast       | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
@@ -104,7 +100,6 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast App    | ❌            | `https://podcast.app/${slug}-e${uniqueEpisodeID}`                                                          |
 | Podcast Guru   | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                         |
 | Podfriend      | ✅            | `https://podfriend.com/podcast/${appleID}/${encodeURIComponent(episodeGUID)}`                              |
-| Podknife       | ❌            | `https://podknife.com/episodes/${uniqueEpisodeID}`                                                         |
 | Podurama       | ❌            | `https://podurama.com/episode/${uniqueEpisodeID}`                                                          |
 | Podverse       | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
 | Snipd          | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                                      |
@@ -131,7 +126,6 @@ These resources also support podcast foreign keys, but their primary purpose may
 | Podchaser       | `https://podchaser.com/f/pod/${appleID}`                                                                                                              |
 | podfollow       | `https://podfollow.com/${appleID}`                                                                                                                    |
 | Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` <br> `https://podnews.net/podcast/${spotifyID}` |
-| Podyssey        | `https://podyssey.fm/podcast/itunes${appleID}`                                                                                                        |
 | Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
 
 ## API Documentation

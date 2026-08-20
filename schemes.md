@@ -25,25 +25,20 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Apple Podcasts  | `podcast://${feedURL}`                                                       |
 | Audacy          | `audacy://`                                                                  |
 | Audible         | `audible://${deepLink}`                                                      |
-| Bullhorn        | `bullhorn://`                                                                |
 | Castamatic      | `castamatic://${feedURL}`                                                              |
 | Castbox         | `castbox://`                                                                 |
 | Castro          | `castros://subscribe/${feedURL}`                                             |
 | Deezer          | `deezer://${deepLink}`                                                       |
 | Downcast        | `downcast://${feedURL}`                                                      |
-| Fathom          | `fb1314374868988580://`                                                      |
 | Fountain        | `fm.fountain.apps://`                                                        |
 | Gaana           | `gaana://`                                                                   |
 | Global Player   | `fb166993440513641://`                                                       |
 | Goodpods        | `goodpods://`                                                                |
-| Google Podcasts | `googlepodcasts://${deepLink}`                                               |
 | gPodder         | `gpodder://${feedURL}`                                                       |
 | Hark            | `com.harkaudio.podcast://`                                                   |
 | iCatcher!       | `icatcher://${feedURL}`                                                      |
 | iHeartRadio     | `iheartradio://`                                                             |
-| Instacast       | `instacast://${feedURL}`                                                     |
 | iVoox           | `ivoox://${deepLink}`                                                        |
-| Jam             | `jam://`                                                                     |
 | Luminary        | `luminary://${deepLink}`                                                     |
 | Moon FM         | `moonfm://`                                                                  |
 | Overcast[^1]    | `overcast://x-callback-url/add?url=${feedURL}` <br> `overcast://${deepLink}` |
@@ -58,7 +53,6 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Podimo          | `podimo://`                                                                  |
 | Podkicker       | `podkicker://subscribe/${feedURL}`                                           |
 | Podverse        | `podverse://`                                                                |
-| Podyssey        | `fb373234189734134://`                                                       |
 | RSSRadio        | `rssradio://${feedURL}`                                                      |
 | SiriusXM        | `sxm://`                                                                     |
 | Snipd           | `snipd://${deepLink}`                                                        |
@@ -67,7 +61,6 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Spotify         | `spotify://`                                                                 |
 | Spreaker        | `spreaker://`                                                                |
 | TuneIn          | `tunein://`                                                                  |
-| Wondery         | `wondery://`                                                                 |
 | YouTube         | `youtube://${deepLink}`                                                      |
 | YouTube Music   | `youtubemusic://${deepLink}`                                                 |
 
