@@ -43,6 +43,7 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | Moon FM         | `moonfm://`                                                                  |
 | Overcast[^1]    | `overcast://x-callback-url/add?url=${feedURL}` <br> `overcast://${deepLink}` |
 | Pandora         | `pandora://`                                                                 |
+| Parasocial      | `parasocial://subscribe/${feedURL}` <br> `parasocial://subscribe?url=${feedURL}` |
 | Player FM       | `playerfm://${feedURL}`                                                      |
 | Pocket Casts    | `pktc://subscribe/${feedURL}`                                                |
 | Podbean         | `podbean://`                                                                 |
