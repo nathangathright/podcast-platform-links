@@ -57,6 +57,7 @@ Since iOS 9.2, Apple has encouraged developers to adopt [universal links](https:
 | SiriusXM        | `sxm://`                                                                     |
 | Snipd           | `snipd://${deepLink}`                                                        |
 | Sonnet          | `sonnet://`                                                                  |
+| SoundCarrot     | `soundcarrot://`                                                             |
 | Soundcloud      | `soundcloud://`                                                              |
 | Spotify         | `spotify://`                                                                 |
 | Spreaker        | `spreaker://`                                                                |

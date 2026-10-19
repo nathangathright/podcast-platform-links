@@ -68,6 +68,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
 | Snipd            | ❌            | `https://share.snipd.com/show/${uniquePlatformID}`                          |
 | Sonnet           | ✅            | `https://sonnet.fm/p/${appleID}`                                            |
+| SoundCarrot      | ❌            | `https://soundcarrot.com/shows/${uniquePlatformID}/`                         |
 | Spotify          | ❌            | `https://open.spotify.com/show/${uniquePlatformID}`                         |
 | Steno.fm         | ✅            | `https://steno.fm/show/${podcastGUID}`                                      |
 | The Podcast App  | ✅            | `https://thepodcastapp.dev/p/itunes${appleID}`<br>`https://thepodcastapp.dev/p/${podcastIndexShowID}` |
@@ -106,6 +107,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podverse       | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
 | Snipd          | ❌            | `https://share.snipd.com/episode/${uniquePlatformID}`                                                      |
 | Sonnet         | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                                        |
+| SoundCarrot    | ❌            | `https://soundcarrot.com/shows/${uniquePlatformID}/${uniqueEpisodeID}/`                                    |
 | Spotify        | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                                      |
 | Steno.fm       | ✅            | `https://steno.fm/show/${podcastGUID}/episode/${base64url(episodeGUID)}`                                   |
 | The Podcast App | ❌           | `https://thepodcastapp.dev/e/${uniqueEpisodeID}`                                                           |
