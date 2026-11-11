@@ -62,6 +62,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`<br>`https://app.podcastguru.io/podcast/X${hex(feedURL)}`|
 | Podcast Parrot   | ✅            | `https://podcastparrot.app/show?url=${encodeURIComponent(feedURL)}`         |
 | Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
+| Podcasts Tracker | ✅            | `https://jonathanantoine.com/podcast/?f=0${encodeURIComponent(feedURL)}`    |
 | PodLP            | ✅            | `https://link.podlp.app/${appleID}`<br>`https://link.podlp.app/${podcastGUID}`|
 | podStation       | ✅            | `https://podstation.github.io/subscribe-ext/?feedURL=${feedURL}`            |
 | Podurama         | ✅            | `https://podurama.com/podcast/${slug}-i${appleID}`                          |
