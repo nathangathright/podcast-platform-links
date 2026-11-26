@@ -54,7 +54,7 @@ The distributed nature of podcasting makes it complicated to link to a show/epis
 | Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
 | Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
 | Pandora          | ❌            | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`                |
-| Parasocial       | ✅            | `https://parasocial.fm/itunes/{appleId}`<BR>`https://parasocial.fm/subscribe?url={feedURL}`<BR>`https://parasocial.fm/pi/{podcastIndexId}` |
+| Parasocial       | ✅            | `https://parasocial.fm/itunes/${appleID}`<br>`https://parasocial.fm/pi/${podcastIndexShowID}`<br>`https://parasocial.fm/subscribe?url=${encodeURIComponent(feedURL)}` |
 | Player FM        | ✅            | `https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}`             |
 | Pocket Casts     | ✅            | `https://pca.st/itunes/${appleID}`                                          |
 | Podbean          | ✅            | `https://www.podbean.com/itunes/${appleID}`                                 |
