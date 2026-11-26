@@ -1,0 +1,50 @@
+{%- assign p = include.platform -%}
+{%- assign none = "" | split: "," -%}
+{%- assign web = p.webLinks | default: none -%}
+{%- assign app = p.appLinks | default: none -%}
+{%- assign methods = web | concat: app -%}
+{%- capture levels -%}{%- for level in site.data.labels.levels -%}{%- assign found = methods | where: "level", level[0] -%}{%- if found.size > 0 -%}{{ level[0] }} {% endif -%}{%- endfor -%}{%- endcapture -%}
+{%- capture search -%}{{ p.name }} {{ p.id }} {% for t in p.tags %}{{ site.data.labels.tags[t] }} {% endfor %}{% for m in methods %}{{ m.template }} {% endfor %}{%- endcapture -%}
+<details class="platform" id="{{ p.id }}" data-row data-tags="{{ p.tags | join: ' ' }}" data-levels="{{ levels | strip }}" data-search="{{ search | downcase | escape }}">
+  <summary>
+    <span class="name">
+      <h3>{{ p.name }}</h3>
+      <span class="tags">{% for t in p.tags %}{{ site.data.labels.tags[t] }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span>
+    </span>
+    <dl class="summary">
+      {%- for level in site.data.labels.levels %}
+      {%- assign found = methods | where: "level", level[0] -%}
+      {%- assign label = "None" -%}
+      {%- for k in site.data.labels.kindPriority -%}
+        {%- assign hit = found | where: "kind", k -%}
+        {%- if hit.size > 0 -%}
+          {%- assign label = site.data.labels.kinds[k] -%}
+          {%- if level[0] == 'app' and k == 'deterministic' -%}
+            {%- assign feed = false -%}{%- for h in hit -%}{%- if h.supports contains 'subscribeByFeed' -%}{%- assign feed = true -%}{%- endif -%}{%- endfor -%}
+            {%- if feed -%}{%- assign label = 'Feed link' -%}{%- else -%}{%- assign label = 'Deep link' -%}{%- endif -%}
+          {%- endif -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor %}
+      <div class="{% if found.size == 0 %}empty{% endif %}"><dt>{{ level[1] }}</dt><dd>{{ label }}{% if found.size > 1 %} <span class="count">· {{ found.size }}</span>{% endif %}</dd></div>
+      {%- endfor %}
+    </dl>
+    <span class="chevron" aria-hidden="true"></span>
+  </summary>
+  <div class="detail">
+    {%- if p.notes %}<p class="notes">{{ p.notes }}</p>{% endif %}
+    {%- if web.size > 0 %}
+    <h4>Web links</h4>
+    <ul class="methods">{% for m in web %}{% include link-method.html method=m %}{% endfor %}</ul>
+    {%- endif %}
+    {%- if app.size > 0 %}
+    <h4>App links</h4>
+    <ul class="methods">{% for m in app %}{% include link-method.html method=m %}{% endfor %}</ul>
+    {%- endif %}
+    {%- if p.api %}
+    <h4>API documentation</h4>
+    <ul class="api">{% for a in p.api %}<li><a href="{{ a.url }}">{{ a.label }}</a></li>{% endfor %}</ul>
+    {%- endif %}
+    <a class="permalink" href="#{{ p.id }}">Link to {{ p.name }}</a>
+  </div>
+</details>

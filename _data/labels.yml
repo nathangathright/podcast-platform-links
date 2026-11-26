@@ -1,0 +1,68 @@
+# Display labels for the site. Platform data lives in platforms.json.
+tags:
+  analyticsResource: Analytics
+  directory: Directory
+  linkAggregator: Link aggregator
+  listenerDestination: Listening app
+  openSource: Open source
+  publisherTool: Publisher tool
+  reviewResource: Reviews
+  socialPlatform: Social
+  transcriptResource: Transcripts
+  value4value: Value for value
+  videoPlatform: Video
+kinds:
+  deterministic: Direct link
+  apiLookup: API lookup
+  searchFallback: Search
+  manualOnly: ID required
+  opensAppOnly: Opens app only
+kindPriority: [deterministic, apiLookup, searchFallback, manualOnly, opensAppOnly]
+supports:
+  showDeepLink: Show
+  episodeDeepLink: Episode
+  subscribeByFeed: Subscribe by feed
+  universalLink: Universal link
+  liveItem: Live item
+  opensApp: Opens app
+levels:
+  show: Show
+  episode: Episode
+  app: App
+placeholders:
+  - name: appleID
+    text: The ID Apple Podcasts assigns to each show in its directory.
+  - name: feedURL
+    text: The podcast's RSS feed URL, including its protocol.
+  - name: strippedFeedURL
+    text: The RSS feed URL without its protocol, as most URL schemes expect.
+  - name: podcastGUID
+    text: The feed's <code>podcast:guid</code>, or the one the Podcast Index generates for it.
+  - name: podcastIndexShowID
+    text: The ID the Podcast Index assigns to each show.
+  - name: podcastIndexEpisodeID
+    text: The ID the Podcast Index assigns to each episode.
+  - name: episodeGUID
+    text: The episode's <code>&lt;guid&gt;</code> from the feed.
+  - name: enclosureURL
+    text: The URL of the episode's media file.
+  - name: slug
+    text: A descriptive string. Where a platform accepts any value, it can be anything.
+  - name: uniquePlatformID
+    text: The platform's own ID for a show, found through its API, search or share links.
+  - name: uniqueEpisodeID
+    text: The platform's own ID for an episode.
+  - name: spotifyID
+    text: Spotify's ID for a show.
+  - name: deepLink
+    text: A universal link on the app's own domain, without its protocol.
+helpers:
+  - name: encodeURIComponent()
+    text: Percent-encodes special characters.
+    url: https://datatracker.ietf.org/doc/html/rfc3986#section-2.1
+  - name: base64url()
+    text: URL-safe base64.
+    url: https://datatracker.ietf.org/doc/html/rfc4648#section-5
+  - name: hex()
+    text: Base16.
+    url: https://datatracker.ietf.org/doc/html/rfc4648#section-8

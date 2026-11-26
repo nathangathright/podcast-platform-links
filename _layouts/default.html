@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="alternate" type="application/json" href="{{ '/platforms.json' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+  <main class="page">
+    {{ content }}
+  </main>
+  <footer class="page footer">
+    <a href="https://github.com/nathangathright/podcast-platform-links">Source and contributions on GitHub</a>
+    · <a href="{{ '/platforms.json' | relative_url }}">platforms.json</a>
+    · <a href="{{ '/schema' | relative_url }}">Data schema</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{%- assign m = include.method -%}
+{%- if m.level == 'app' and m.kind == 'deterministic' -%}
+  {%- if m.supports contains 'subscribeByFeed' -%}{%- assign label = 'Feed link' -%}{%- else -%}{%- assign label = 'Deep link' -%}{%- endif -%}
+{%- else -%}
+  {%- assign label = site.data.labels.kinds[m.kind] -%}
+{%- endif -%}
+<li class="method">
+  <div class="method-head">
+    <span class="level">{{ site.data.labels.levels[m.level] }}</span>
+    <span class="kind kind-{{ m.kind }}">{{ label }}</span>
+    {%- if m.source %} <a class="source" href="{{ m.source }}">Docs</a>{% endif %}
+  </div>
+  {%- if m.template %}
+  <code class="template">{{ m.template | escape }}</code>
+  {%- endif %}
+  <dl class="method-meta">
+    <div><dt>Requires</dt><dd>{% if m.requires.size > 0 %}{% for r in m.requires %}<code>{{ r }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}Nothing{% endif %}</dd></div>
+    {%- if m.supports and m.supports.size > 0 %}
+    <div><dt>Supports</dt><dd>{% for s in m.supports %}{{ site.data.labels.supports[s] | default: s }}{% unless forloop.last %}, {% endunless %}{% endfor %}</dd></div>
+    {%- endif %}
+  </dl>
+</li>
