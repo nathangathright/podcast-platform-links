@@ -1,0 +1,2523 @@
+[
+  {
+    "id": "1tuner",
+    "name": "1tuner",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://1tuner.com/podcast/${slug}/${base64url(feedURL)}",
+        "requires": [
+          "slug",
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "deterministic",
+        "template": "https://1tuner.com/podcast/${slug}/${base64url(feedURL)}/${encodeURIComponent(episodeGUID)}",
+        "requires": [
+          "slug",
+          "feedURL",
+          "episodeGUID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "notes": "The slug is descriptive and can be any value."
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon Music",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://music.amazon.com/podcasts/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "amznmp3://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "antennapod",
+    "name": "AntennaPod",
+    "tags": [
+      "listenerDestination",
+      "openSource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://antennapod.org/deeplink/subscribe?url=${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "antennapod-subscribe://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anytimeplayer",
+    "name": "Anytime Player",
+    "tags": [
+      "listenerDestination",
+      "openSource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://anytimeplayer.app/subscribe?url=${feedURL}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "anytime-subscribe://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apple",
+    "name": "Apple Podcasts",
+    "tags": [
+      "directory",
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcasts.apple.com/podcast/id${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink",
+          "universalLink"
+        ],
+        "source": "https://performance-partners.apple.com/search-api"
+      },
+      {
+        "level": "episode",
+        "kind": "apiLookup",
+        "template": "https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}",
+        "requires": [
+          "appleID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink",
+          "universalLink"
+        ],
+        "source": "https://performance-partners.apple.com/search-api"
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "podcast://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "api": [
+      {
+        "label": "Apple Search API",
+        "url": "https://performance-partners.apple.com/search-api"
+      }
+    ]
+  },
+  {
+    "id": "audacy",
+    "name": "Audacy",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "audacy://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "audible",
+    "name": "Audible",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "audible://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bbcsounds",
+    "name": "BBC Sounds",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://www.bbc.co.uk/sounds/brand/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://www.bbc.co.uk/sounds/play/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "castamatic",
+    "name": "Castamatic",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://castamatic.com/guid/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://castamatic.com/+${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "castamatic://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "castbox",
+    "name": "Castbox",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://castbox.fm/vic/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}",
+        "requires": [
+          "slug",
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "castbox://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "castro",
+    "name": "Castro",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://castro.fm/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink",
+          "universalLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://castro.fm/podcast/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://castro.fm/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink",
+          "universalLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "castros://subscribe/${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "curiocaster",
+    "name": "CurioCaster",
+    "tags": [
+      "listenerDestination",
+      "value4value"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://curiocaster.com/podcast/pi${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deezer",
+    "name": "Deezer",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://www.deezer.com/show/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://developers.deezer.com/api/podcast"
+      },
+      {
+        "level": "episode",
+        "kind": "apiLookup",
+        "template": "https://www.deezer.com/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ],
+        "source": "https://developers.deezer.com/api/episode"
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "deezer://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ],
+    "api": [
+      {
+        "label": "Deezer Podcast API",
+        "url": "https://developers.deezer.com/api/podcast"
+      }
+    ]
+  },
+  {
+    "id": "downcast",
+    "name": "Downcast",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "downcast://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fountain",
+    "name": "Fountain",
+    "tags": [
+      "listenerDestination",
+      "value4value"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://fountain.fm/show/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://fountain.fm/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "fm.fountain.apps://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gaana",
+    "name": "Gaana",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "gaana://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "globalplayer",
+    "name": "Global Player",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://www.globalplayer.com/podcasts/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "fb166993440513641://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goodpods",
+    "name": "Goodpods",
+    "tags": [
+      "listenerDestination",
+      "reviewResource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.goodpods.com/podcasts-aid/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "goodpods://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpodder",
+    "name": "gPodder",
+    "tags": [
+      "directory",
+      "listenerDestination",
+      "openSource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://gpodder.net/subscribe?url=${feedURL}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "gpodder://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "greatpods",
+    "name": "Great Pods",
+    "tags": [
+      "directory",
+      "reviewResource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.greatpods.co/podcasts?podcastIndexId=${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.greatpods.co/podcasts?itunesId=${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hark",
+    "name": "Hark",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://harkaudio.com/p/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "com.harkaudio.podcast://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "icatcher",
+    "name": "iCatcher!",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "icatcher://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iheartradio",
+    "name": "iHeartRadio",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://iheart.com/podcast/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "apiLookup",
+        "template": "https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}",
+        "requires": [
+          "slug",
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "iheartradio://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ivoox",
+    "name": "iVoox",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "ivoox://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "listennotes",
+    "name": "Listen Notes",
+    "tags": [
+      "directory"
+    ],
+    "api": [
+      {
+        "label": "Listen Notes API",
+        "url": "https://www.listennotes.com/api/docs/"
+      }
+    ],
+    "notes": "Public API documentation is available, but no deterministic public show or episode URL template is recorded here yet."
+  },
+  {
+    "id": "metacast",
+    "name": "Metacast",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://metacast.app/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://open.metacast.app/podcasts/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://open.metacast.app/podcasts/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "moonfm",
+    "name": "Moon FM",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://moon.fm/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "moonfm://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "tags": [
+      "listenerDestination",
+      "videoPlatform"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://www.netflix.com/title/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "npr",
+    "name": "NPR",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://www.npr.org/podcasts/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://www.npr.org/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "odesli",
+    "name": "Odesli",
+    "tags": [
+      "linkAggregator"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://pods.link/i/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "overcast",
+    "name": "Overcast",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://overcast.fm/itunes${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink",
+          "universalLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://overcast.fm/+${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink",
+          "universalLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "overcast://x-callback-url/add?url=${feedURL}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "overcast://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ],
+    "notes": "Overcast feed-subscribe schemes require the feed URL to include the protocol."
+  },
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}",
+        "requires": [
+          "slug",
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "apiLookup",
+        "template": "https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}",
+        "requires": [
+          "slug",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "pandora://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "parasocial",
+    "name": "Parasocial",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://parasocial.fm/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://parasocial.fm/pi/${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://parasocial.fm/subscribe?url=${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "parasocial://subscribe/${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "parasocial://subscribe?url=${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "playerfm",
+    "name": "Player FM",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://player.fm/series/${uniquePlatformID}/${uniqueEpisodeID}",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "playerfm://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "plink",
+    "name": "Plink",
+    "tags": [
+      "linkAggregator"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://plinkhq.com/i/${appleID}?to=page",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pocketcasts",
+    "name": "Pocket Casts",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://pca.st/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://pocketcasts.com/submit/"
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://pca.st/feed/${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://pca.st/podcast/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://pca.st/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "pktc://subscribe/${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ],
+    "api": [
+      {
+        "label": "Pocket Casts submit and directory notes",
+        "url": "https://pocketcasts.com/submit/"
+      }
+    ]
+  },
+  {
+    "id": "podbean",
+    "name": "Podbean",
+    "tags": [
+      "listenerDestination",
+      "publisherTool"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.podbean.com/itunes/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://podbean.com/media/share/dir-${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "podbean://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastaddict",
+    "name": "Podcast Addict",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "deterministic",
+        "template": "https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}",
+        "requires": [
+          "enclosureURL"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "podcastaddict://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastapp",
+    "name": "Podcast App",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://podcast.app/${slug}-p${uniquePlatformID}",
+        "requires": [
+          "slug",
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://podcast.app/${slug}-e${uniqueEpisodeID}",
+        "requires": [
+          "slug",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "podcastapp://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastdetails",
+    "name": "Podcast Details",
+    "tags": [
+      "directory"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastdetails.com/?url=${feedURL}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastguru",
+    "name": "Podcast Guru",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://app.podcastguru.io/podcast/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://app.podcastguru.io/podcast/X${hex(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}",
+        "requires": [
+          "appleID",
+          "slug",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "podcastguru://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastindex",
+    "name": "Podcast Index",
+    "tags": [
+      "directory"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastindex.org/podcast/${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://podcastindex-org.github.io/docs-api/#podcasts"
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastindex.org/podcast/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://podcastindex-org.github.io/docs-api/#podcasts"
+      }
+    ],
+    "api": [
+      {
+        "label": "Podcast Index API",
+        "url": "https://podcastindex-org.github.io/docs-api/#podcasts"
+      }
+    ]
+  },
+  {
+    "id": "podcastparrot",
+    "name": "Podcast Parrot",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastparrot.app/show?url=${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastrepublic",
+    "name": "Podcast Republic",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.podcastrepublic.net/podcast/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcaststracker",
+    "name": "Podcasts Tracker",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://jonathanantoine.com/podcast/?f=0${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcastxray",
+    "name": "Podcast X-Ray",
+    "tags": [
+      "analyticsResource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podcastxray.com/podcast/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podcat",
+    "name": "Podcat",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "podcat://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podchaser",
+    "name": "Podchaser",
+    "tags": [
+      "directory",
+      "reviewResource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podchaser.com/f/pod/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://api-docs.podchaser.com/docs/overview"
+      }
+    ],
+    "api": [
+      {
+        "label": "Podchaser API",
+        "url": "https://api-docs.podchaser.com/docs/overview"
+      }
+    ]
+  },
+  {
+    "id": "podengine",
+    "name": "Pod Engine",
+    "tags": [
+      "analyticsResource",
+      "directory"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://www.podengine.ai/podcasts/id/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ],
+        "source": "https://www.podengine.ai/api-docs"
+      }
+    ],
+    "api": [
+      {
+        "label": "Pod Engine API",
+        "url": "https://www.podengine.ai/api-docs"
+      }
+    ]
+  },
+  {
+    "id": "podfollow",
+    "name": "podfollow",
+    "tags": [
+      "linkAggregator"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podfollow.com/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podfriend",
+    "name": "Podfriend",
+    "tags": [
+      "listenerDestination",
+      "openSource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podfriend.com/podcast/${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "deterministic",
+        "template": "https://podfriend.com/podcast/${slug}/episode/${podcastIndexEpisodeID}",
+        "requires": [
+          "slug",
+          "podcastIndexEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podimo",
+    "name": "Podimo",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "podimo://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podkicker",
+    "name": "Podkicker",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "podkicker://subscribe/${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podlink",
+    "name": "pod.link",
+    "tags": [
+      "linkAggregator"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://pod.link/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://pod.link/${base64url(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podlp",
+    "name": "PodLP",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://link.podlp.app/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://link.podlp.app/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podnews",
+    "name": "Podnews",
+    "tags": [
+      "directory"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podnews.net/podcast/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podnews.net/podcast/pi${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podnews.net/podcast/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://podnews.net/podcast/${spotifyID}",
+        "requires": [
+          "spotifyID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podurama",
+    "name": "Podurama",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://podurama.com/podcast/${slug}-i${appleID}",
+        "requires": [
+          "slug",
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://podurama.com/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "podverse",
+    "name": "Podverse",
+    "tags": [
+      "listenerDestination",
+      "openSource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink",
+          "liveItem"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://podverse.fm/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "podverse://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rephonic",
+    "name": "Rephonic",
+    "tags": [
+      "analyticsResource",
+      "directory"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://rephonic.com/podcasts/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rssradio",
+    "name": "RSSRadio",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "rssradio://${strippedFeedURL}",
+        "requires": [
+          "strippedFeedURL"
+        ],
+        "supports": [
+          "subscribeByFeed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "siriusxm",
+    "name": "SiriusXM",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "sxm://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "snipd",
+    "name": "Snipd",
+    "tags": [
+      "listenerDestination",
+      "transcriptResource"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://snipd.com/rs/show/${encodeURIComponent(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://share.snipd.com/show/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "deterministic",
+        "template": "https://snipd.com/rs/show/${encodeURIComponent(feedURL)}/episode/${encodeURIComponent(episodeGUID)}",
+        "requires": [
+          "feedURL",
+          "episodeGUID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://share.snipd.com/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "snipd://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sonnet",
+    "name": "Sonnet",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://sonnet.fm/p/${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}",
+        "requires": [
+          "appleID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "sonnet://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soundcarrot",
+    "name": "SoundCarrot",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://soundcarrot.com/shows/${uniquePlatformID}/",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://soundcarrot.com/shows/${uniquePlatformID}/${uniqueEpisodeID}/",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "soundcarrot://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soundcloud",
+    "name": "SoundCloud",
+    "tags": [
+      "listenerDestination"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "soundcloud://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://open.spotify.com/show/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink",
+          "universalLink"
+        ],
+        "source": "https://developer.spotify.com/documentation/web-api"
+      },
+      {
+        "level": "episode",
+        "kind": "apiLookup",
+        "template": "https://open.spotify.com/episode/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink",
+          "universalLink"
+        ],
+        "source": "https://developer.spotify.com/documentation/web-api"
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "spotify://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ],
+    "api": [
+      {
+        "label": "Spotify Web API",
+        "url": "https://developer.spotify.com/documentation/web-api"
+      }
+    ],
+    "notes": "Show and episode web links require Spotify IDs. IDs may be found through Spotify Web API search or other lookup workflows."
+  },
+  {
+    "id": "spreaker",
+    "name": "Spreaker",
+    "tags": [
+      "listenerDestination",
+      "publisherTool"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "spreaker://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thepodcastapp",
+    "name": "The Podcast App",
+    "tags": [
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://thepodcastapp.dev/p/itunes${appleID}",
+        "requires": [
+          "appleID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://thepodcastapp.dev/p/${podcastIndexShowID}",
+        "requires": [
+          "podcastIndexShowID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://thepodcastapp.dev/e/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "thepodcastapp://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "truefans",
+    "name": "TrueFans",
+    "tags": [
+      "listenerDestination",
+      "value4value"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://truefans.fm/${podcastGUID}",
+        "requires": [
+          "podcastGUID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://truefans.fm/${slug}/${uniqueEpisodeID}",
+        "requires": [
+          "slug",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tunein",
+    "name": "TuneIn",
+    "tags": [
+      "directory",
+      "listenerDestination"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "manualOnly",
+        "template": "https://tunein.com/podcasts/${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}",
+        "requires": [
+          "uniquePlatformID",
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "opensAppOnly",
+        "template": "tunein://",
+        "requires": [],
+        "supports": [
+          "opensApp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "tags": [
+      "listenerDestination",
+      "videoPlatform"
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "youtube://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youtubemusic",
+    "name": "YouTube Music",
+    "tags": [
+      "listenerDestination",
+      "videoPlatform"
+    ],
+    "webLinks": [
+      {
+        "level": "show",
+        "kind": "deterministic",
+        "template": "https://music.youtube.com/library/podcasts?addrssfeed=${base64url(feedURL)}",
+        "requires": [
+          "feedURL"
+        ],
+        "supports": [
+          "showDeepLink",
+          "subscribeByFeed"
+        ]
+      },
+      {
+        "level": "show",
+        "kind": "apiLookup",
+        "template": "https://music.youtube.com/playlist?list=${uniquePlatformID}",
+        "requires": [
+          "uniquePlatformID"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      },
+      {
+        "level": "episode",
+        "kind": "manualOnly",
+        "template": "https://music.youtube.com/podcast/${uniqueEpisodeID}",
+        "requires": [
+          "uniqueEpisodeID"
+        ],
+        "supports": [
+          "episodeDeepLink"
+        ]
+      }
+    ],
+    "appLinks": [
+      {
+        "level": "app",
+        "kind": "deterministic",
+        "template": "youtubemusic://${deepLink}",
+        "requires": [
+          "deepLink"
+        ],
+        "supports": [
+          "showDeepLink"
+        ]
+      }
+    ]
+  }
+]
