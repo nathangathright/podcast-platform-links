@@ -1,3 +1,8 @@
 title: "Podcast Platform Links"
-description: "The distributed nature of podcasting makes it complicated to link to a show/episode on a given platform."
+description: "How to link to podcast shows and episodes on each podcast platform, and how to open each app."
 markdown: GFM
+exclude:
+  - README.md
+  - scripts
+  - Gemfile
+  - Gemfile.lock

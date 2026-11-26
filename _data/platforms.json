@@ -2137,49 +2137,6 @@
     ]
   },
   {
-    "id": "sonnet",
-    "name": "Sonnet",
-    "tags": [
-      "listenerDestination"
-    ],
-    "webLinks": [
-      {
-        "level": "show",
-        "kind": "deterministic",
-        "template": "https://sonnet.fm/p/${appleID}",
-        "requires": [
-          "appleID"
-        ],
-        "supports": [
-          "showDeepLink"
-        ]
-      },
-      {
-        "level": "episode",
-        "kind": "manualOnly",
-        "template": "https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}",
-        "requires": [
-          "appleID",
-          "uniqueEpisodeID"
-        ],
-        "supports": [
-          "episodeDeepLink"
-        ]
-      }
-    ],
-    "appLinks": [
-      {
-        "level": "app",
-        "kind": "opensAppOnly",
-        "template": "sonnet://",
-        "requires": [],
-        "supports": [
-          "opensApp"
-        ]
-      }
-    ]
-  },
-  {
     "id": "soundcarrot",
     "name": "SoundCarrot",
     "tags": [

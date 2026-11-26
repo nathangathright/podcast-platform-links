@@ -1,148 +1,22 @@
 # Podcast Platform Links
-The distributed nature of podcasting makes it complicated to link to a show/episode on a given platform. Some platforms provide [API methods](#api-documentation) to determine exact URLs or nothing at all, but many platforms support routes based on foreign keys that let us construct URLs with confidence.
 
-## Table of Contents
-1. [Glossary](#glossary)
-1. [Show Links](#show-links)
-1. [Episode Links](#episode-links)
-1. [Resource Links](#resource-links)
-1. [API Documentation](#api-documentation)
-1. [Contributing](#contributing)
-1. [Footnotes](#footnotes)
+Podcasting is distributed, so linking to a show or episode is different on every platform. This guide documents the link formats you can observe for each one: which links you can build from open podcast identifiers (Apple Podcasts ID, feed URL, podcast GUID, Podcast Index IDs), which need the platform's own ID or an API lookup, and which URL schemes open each app.
 
-## Glossary
-### Show-level foreign keys
-* `appleID`: An ID assigned by Apple Podcasts to each show submitted to their directory.
-* `feedURL`: The RSS feed URL of the podcast.
-* `podcastGUID`: A UUID provided in the RSS feeds of some podcasts or generated for them by the Podcast Index.
-* `podcastIndexShowID`: An ID assigned by the Podcast Index to each show submitted to their directory.
+**Browse it at [nathangathright.github.io/podcast-platform-links](https://nathangathright.github.io/podcast-platform-links/).** You can search, filter by tag or link type, and link to a single platform.
 
-### Episode-level foreign keys
-* `enclosureURL`: The URL of the media for each episode.
-* `episodeGUID`: An identifying string for each episode in the RSS feeds of most, but not all podcasts.
-* `podcastIndexEpisodeID`: An ID assigned by the Podcast Index to each episode in their directory.
+The data is also published as JSON at [`platforms.json`](https://nathangathright.github.io/podcast-platform-links/platforms.json).
 
-### Other
-* `base16()` or `hex()`: A method of encoding strings using a [hexadecimal numeral system](https://datatracker.ietf.org/doc/html/rfc4648#section-8).
-* `base64url()`: A method of encoding strings using a [URL-safe variant of base64](https://datatracker.ietf.org/doc/html/rfc4648#section-5).
-* `encodeURIComponent()`: A method of encoding strings by replacing special characters with [their UTF-8 encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1).
-* `slug`: In this context, a string with a malleable, arbitrary value. For some platforms, it can be discarded entirely. 
-* `uniquePlatformID` and `uniqueEpisodeID`: A platform-specific identifier that may only be obtained via API or not at all.
+## Add or fix a platform
 
-## Show Links
-| Platform         | Foreign Keys | URL Pattern                                                                 |
-|------------------|--------------|-----------------------------------------------------------------------------|
-| 1tuner           | ✅            | `https://1tuner.com/podcast/${slug}/${base64url(feedURL)}`                  |
-| Amazon Music     | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}`                     |
-| AntennaPod       | ✅            | `https://antennapod.org/deeplink/subscribe?url=${encodeURIComponent(feedURL)}` |
-| Anytime Player   | ✅            | `https://anytimeplayer.app/subscribe?url=${feedURL}`                        |
-| Apple Podcasts   | ✅            | `https://podcasts.apple.com/podcast/id${appleID}`                           |
-| BBC Sounds       | ❌            | `https://www.bbc.co.uk/sounds/brand/${uniquePlatformID}`                    |
-| Castamatic       | ✅            | `https://castamatic.com/guid/${podcastGUID}`                                |
-| Castbox          | ✅            | `https://castbox.fm/vic/${appleID}`                                         |
-| Castro           | ✅            | `https://castro.fm/itunes/${appleID}`<br>`https://castro.fm/podcast/${uniquePlatformID}`|
-| CurioCaster      | ✅            | `https://curiocaster.com/podcast/pi${podcastIndexShowID}`                   |
-| Deezer           | ❌            | `https://www.deezer.com/show/${uniquePlatformID}`                           |
-| Fountain         | ❌            | `https://fountain.fm/show/${uniquePlatformID}`                              |
-| Global Player    | ❌            | `https://www.globalplayer.com/podcasts/${uniquePlatformID}`                 |
-| Goodpods         | ✅            | `https://www.goodpods.com/podcasts-aid/${appleID}`                          |
-| gPodder          | ✅            | `https://gpodder.net/subscribe?url=${feedURL}`                              |
-| Hark             | ❌            | `https://harkaudio.com/p/${uniquePlatformID}`                               |
-| iHeartRadio      | ❌            | `https://iheart.com/podcast/${uniquePlatformID}`                            |
-| Metacast         | ✅            | `https://metacast.app/itunes/${appleID}`<br>`https://open.metacast.app/podcasts/{podcastGUID}`|
-| Moon FM          | ✅            | `https://moon.fm/itunes/${appleID}`                                         |
-| Netflix          | ❌            | `https://www.netflix.com/title/${uniquePlatformID}`                         |
-| NPR              | ❌            | `https://www.npr.org/podcasts/${uniquePlatformID}`                          |
-| Overcast         | ✅            | `https://overcast.fm/itunes${appleID}`                                      |
-| Pandora          | ❌            | `https://pandora.com/podcast/${slug}/PC:${uniquePlatformID}`                |
-| Parasocial       | ✅            | `https://parasocial.fm/itunes/${appleID}`<br>`https://parasocial.fm/pi/${podcastIndexShowID}`<br>`https://parasocial.fm/subscribe?url=${encodeURIComponent(feedURL)}` |
-| Player FM        | ✅            | `https://player.fm/subscribe?id=${encodeURIComponent(feedURL)}`             |
-| Pocket Casts     | ✅            | `https://pca.st/itunes/${appleID}`<br>`https://pca.st/feed/${encodeURIComponent(feedURL)}`<br>`https://pca.st/podcast/${uniquePlatformID}`|
-| Podbean          | ✅            | `https://www.podbean.com/itunes/${appleID}`                                 |
-| Podcast Addict   | ✅            | `https://podcastaddict.com/feed/${encodeURIComponent(feedURL)}`             |
-| Podcast App      | ❌            | `https://podcast.app/${slug}-p${uniquePlatformID}`                          |
-| Podcast Guru     | ✅            | `https://app.podcastguru.io/podcast/${appleID}`<br>`https://app.podcastguru.io/podcast/X${hex(feedURL)}`|
-| Podcast Parrot   | ✅            | `https://podcastparrot.app/show?url=${encodeURIComponent(feedURL)}`         |
-| Podcast Republic | ✅            | `https://www.podcastrepublic.net/podcast/${appleID}`                        |
-| Podcasts Tracker | ✅            | `https://jonathanantoine.com/podcast/?f=0${encodeURIComponent(feedURL)}`    |
-| Podfriend        | ✅            | `https://podfriend.com/podcast/${podcastIndexShowID}`                       |
-| PodLP            | ✅            | `https://link.podlp.app/${appleID}`<br>`https://link.podlp.app/${podcastGUID}`|
-| Podurama         | ✅            | `https://podurama.com/podcast/${slug}-i${appleID}`                          |
-| Podverse         | ✅            | `https://api.podverse.fm/api/v1/podcast/podcastindex/${podcastIndexShowID}` |
-| Snipd            | ✅            | `https://snipd.com/rs/show/${encodeURIComponent(feedURL)}`<br>`https://share.snipd.com/show/${uniquePlatformID}`|
-| Sonnet           | ✅            | `https://sonnet.fm/p/${appleID}`                                            |
-| SoundCarrot      | ❌            | `https://soundcarrot.com/shows/${uniquePlatformID}/`                         |
-| Spotify          | ❌            | `https://open.spotify.com/show/${uniquePlatformID}`                         |
-| The Podcast App  | ✅            | `https://thepodcastapp.dev/p/itunes${appleID}`<br>`https://thepodcastapp.dev/p/${podcastIndexShowID}` |
-| TrueFans         | ✅            | `https://truefans.fm/${podcastGUID}`                                        |
-| TuneIn           | ❌            | `https://tunein.com/podcasts/${uniquePlatformID}`                           |
-| YouTube Music    | ✅            | `https://music.youtube.com/library/podcasts?addrssfeed=${base64url(feedURL)}`<br>`https://music.youtube.com/playlist?list=${uniquePlatformID}`|
+Every platform is one record in [`_data/platforms.json`](_data/platforms.json), and the site is built from that file.
 
-## Episode Links
-| Platform       | Foreign Keys | URL Pattern                                                                                                |
-|----------------|--------------|------------------------------------------------------------------------------------------------------------|
-| 1tuner         | ✅            | `https://1tuner.com/podcast/${slug}/${base64url(feedURL)}/${encodeURIComponent(episodeGUID)}`              |
-| Amazon Music   | ❌            | `https://music.amazon.com/podcasts/${uniquePlatformID}/episodes/${uniqueEpisodeID}`                        |
-| Apple Podcasts | ❌            | `https://podcasts.apple.com/podcast/id${appleID}?i=${uniqueEpisodeID}`                                     |
-| BBC Sounds     | ❌            | `https://www.bbc.co.uk/sounds/play/${uniqueEpisodeID}`                                                     |
-| Castamatic     | ❌            | `https://castamatic.com/+${uniqueEpisodeID}`                                                               |
-| Castbox        | ❌            | `https://castbox.fm/episode/${slug}-id${uniquePlatformID}-id${uniqueEpisodeID}`                            |
-| Castro         | ❌            | `https://castro.fm/episode/${uniqueEpisodeID}`                                                             |
-| Deezer         | ❌            | `https://www.deezer.com/episode/${uniqueEpisodeID}`                                                        |
-| Fountain       | ❌            | `https://fountain.fm/episode/${uniqueEpisodeID}`                                                           |
-| Global Player  | ❌            | `https://www.globalplayer.com/podcasts/episodes/${uniqueEpisodeID}/`                                       |
-| Goodpods       | ❌            | `https://goodpods.com/podcasts/${uniquePlatformID}/${uniqueEpisodeID}`                                     |
-| Hark           | ❌            | `https://harkaudio.com/p/${uniquePlatformID}/${uniqueEpisodeID}`                                           |
-| iHeartRadio    | ❌            | `https://iheart.com/podcast/${slug}-${uniquePlatformID}/episode/${slug}-${uniqueEpisodeID}`                |
-| Metacast       | ❌            | `https://open.metacast.app/podcasts/episode/{uniqueEpisodeID}`                                             |
-| NPR            | ❌            | `https://www.npr.org/${uniqueEpisodeID}`                                                                   |
-| Overcast       | ❌            | `https://overcast.fm/+${uniqueEpisodeID}`                                                                  |
-| Pandora        | ❌            | `https://pandora.com/podcast/${slug}/${slug}/PC:${uniqueEpisodeID}`                                        |
-| Player FM      | ❌            | `https://player.fm/series/${uniquePlatformID}/${uniqueEpisodeID}`                                          |
-| Pocket Casts   | ❌            | `https://pca.st/episode/${uniqueEpisodeID}`                                                                |
-| Podbean        | ❌            | `https://podbean.com/media/share/dir-${uniqueEpisodeID}`                                                   |
-| Podcast Addict | ✅            | `https://podcastaddict.com/episode/${encodeURIComponent(enclosureURL)}`                                    |
-| Podcast App    | ❌            | `https://podcast.app/${slug}-e${uniqueEpisodeID}`                                                          |
-| Podcast Guru   | ❌            | `https://app.podcastguru.io/podcast/${appleID}/episode/${slug}-${uniqueEpisodeID}`                         |
-| Podfriend      | ✅            | `https://podfriend.com/podcast/${slug}/episode/${podcastIndexEpisodeID}`                                   |
-| Podurama       | ❌            | `https://podurama.com/episode/${uniqueEpisodeID}`                                                          |
-| Podverse       | ❌            | `https://podverse.fm/episode/${uniqueEpisodeID}`                                                           |
-| Snipd          | ✅            | `https://snipd.com/rs/show/${encodeURIComponent(feedURL)}/episode/${encodeURIComponent(episodeGUID)}`<br>`https://share.snipd.com/episode/${uniqueEpisodeID}`|
-| Sonnet         | ❌            | `https://sonnet.fm/p/${appleID}/${uniqueEpisodeID}`                                                        |
-| SoundCarrot    | ❌            | `https://soundcarrot.com/shows/${uniquePlatformID}/${uniqueEpisodeID}/`                                    |
-| Spotify        | ❌            | `https://open.spotify.com/episode/${uniqueEpisodeID}`                                                      |
-| The Podcast App | ❌           | `https://thepodcastapp.dev/e/${uniqueEpisodeID}`                                                           |
-| TrueFans       | ❌            | `https://truefans.fm/${slug}/${uniqueEpisodeID}`                                                           |
-| TuneIn         | ❌            | `https://tunein.com/podcasts/p${uniquePlatformID}/?topicId=${uniqueEpisodeID}`                             |
-| YouTube Music  | ❌            | `https://music.youtube.com/podcast/${uniqueEpisodeID}`                                                     |
+1. Edit or add the platform's record. Keep records sorted by `id`. [`schema.md`](schema.md) describes each field, the placeholders and the tags.
+2. Run the validator. It needs only Node.
 
-## Resource Links
-These resources also support podcast foreign keys, but their primary purpose may be directing listeners to one of the apps above rather than a primary listening destination.
+   ```sh
+   node scripts/validate.mjs
+   ```
 
-| Platform        | URL Pattern                                                                                                                                           |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Great Pods      | `https://www.greatpods.co/podcasts?podcastIndexId=${podcastIndexShowID}` <br> `https://www.greatpods.co/podcasts?itunesId=${appleID}` |
-| Odesli          | `https://pods.link/i/${appleID}`                                                                                                                      |
-| Plink           | `https://plinkhq.com/i/${appleID}?to=page`                                                                                                            |
-| Pod Engine      | `https://www.podengine.ai/podcasts/id/${appleID}`                                                                                                     |
-| pod.link        | `https://pod.link/${appleID}` <br> `https://pod.link/${base64url(feedURL)}`                                                                           |
-| Podcast Details | `https://podcastdetails.com/?url=${feedURL}`                                                                                                          |
-| Podcast Index   | `https://podcastindex.org/podcast/${podcastIndexShowID}` <br> `https://podcastindex.org/podcast/${podcastGUID}`                                       |
-| Podcast X-Ray   | `https://podcastxray.com/podcast/${appleID}`                                                                                                          |
-| Podchaser       | `https://podchaser.com/f/pod/${appleID}`                                                                                                              |
-| podfollow       | `https://podfollow.com/${appleID}`                                                                                                                    |
-| Podnews         | `https://podnews.net/podcast/${appleID}` <br> `https://podnews.net/podcast/pi${podcastIndexShowID}` <br> `https://podnews.net/podcast/${podcastGUID}` <br> `https://podnews.net/podcast/${spotifyID}` |
-| Rephonic        | `https://rephonic.com/podcasts/${uniquePlatformID}`                                                                                                   |
+3. Open a pull request with an example URL for each link you add or change, and what it opened. The validator runs on every pull request.
 
-## API Documentation
-* [Apple Podcasts](https://performance-partners.apple.com/search-api)
-* [Deezer](https://developers.deezer.com/api/podcast)
-* [Listen Notes](https://www.listennotes.com/api/docs/)
-* [Pocket Casts](https://pocketcasts.com/submit/)
-* [Pod Engine](https://www.podengine.ai/api-docs)
-* [Podcast Index](https://podcastindex-org.github.io/docs-api/#podcasts)
-* [Podchaser](https://api-docs.podchaser.com/docs/overview)
-* [Spotify](https://developer.spotify.com/documentation/web-api)
-
-## Contributing
-If you have an update to improve this guide, please [fork the repo](https://github.com/nathangathright/podcast-platform-links/fork) and create a pull request. This Markdown document is easily editable from the GitHub web interface without the need to clone the repo locally.
+You can edit the file in GitHub's web editor without cloning the repo.

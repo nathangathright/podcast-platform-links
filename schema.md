@@ -1,6 +1,10 @@
+---
+title: Data schema
+---
+
 # Platform data schema
 
-[`_data/platforms.json`](_data/platforms.json) is the source of truth for every platform in this guide. It's an array of platform records, sorted by `id`. Check a change with:
+[`_data/platforms.json`](https://github.com/nathangathright/podcast-platform-links/blob/main/_data/platforms.json) is the source of truth for every platform in this guide. It's an array of platform records, sorted by `id`. Check a change with:
 
 ```sh
 node scripts/validate.mjs
